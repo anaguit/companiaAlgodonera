@@ -1,5 +1,5 @@
 function productoData(sequelize,Datatypes){
-    const alias = "producto";
+    const alias = "Producto";
 
     const cols = {
         id:{

@@ -1,9 +1,9 @@
 function AdministradorData(sequelize,Datatypes){
-    const alias = "administrador";
+    const alias = "Administrador";
 
     const cols = {
         id:{
-            type:Datatypes.Integer,
+            type:Datatypes.INTEGER,
             autoIncrement:true,
             allowNull:false,
             primaryKey:true

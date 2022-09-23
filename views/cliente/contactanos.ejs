@@ -5,7 +5,23 @@
     <%- include("../parciales/header") %>
 
     <main>
-        <h1>EL MAIN</h1>
+        <h1>Dejanos tu mensaje</h1>
+        <form action="/contacto" method="POST">
+            <div class="inputsContacto">
+                <input type="text" name="nombre" placeholder="nombre">
+            </div>
+            <div class="inputsContacto">
+                <input type="text" name="mail" placeholder="mail">
+            </div>
+            <div class="inputsContacto">
+                <input type="text" name="asunto" placeholder="asunto">
+            </div>
+            <div class="inputsContacto">
+                <textarea name="mensaje" placeholder="dejanos tu mensaje"></textarea>
+            </div>
+            <button type="submit">Enviar</button>
+            <button type="reset">Cancelar</button>
+        </form>
     </main>
 
     <%- include("../parciales/footer") %>   

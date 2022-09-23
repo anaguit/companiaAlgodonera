@@ -1,5 +1,5 @@
 function mensajeData(sequelize,Datatypes){
-    const alias = "mensaje";
+    const alias = "Mensaje";
 
     const cols = {
         id:{
@@ -31,9 +31,9 @@ function mensajeData(sequelize,Datatypes){
         tableName:"mensaje"
     };
 
-    const mensaje = sequelize.define(alias,cols,config);
+    const Mensaje = sequelize.define(alias,cols,config);
 
-    return mensaje;
+    return Mensaje;
 };
 
 module.exports = mensajeData;
