@@ -8,8 +8,17 @@ const controladorAdmin = {
         res.render("crear");
     },
     guardarCreado:(req,res)=>{
-        //console.log(req.file);
-        res.send(req.file)
+        db.Producto.create({
+            tipo:req.body.tipo,
+            marca:req.body.marca,
+            descripcion:req.body.descripcion,
+            precio:req.body.precio,
+            foto:req.file.path,
+            destacado:req.body.destacado,
+            oferta:req.body.oferta
+        }).then((resultado)=>{
+            res.render("creadoExitoso");
+        })
     }
 };
 
