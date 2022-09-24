@@ -19,5 +19,7 @@ const subirArchivo = multer({storage:multerDiskStorage});
 router.get("/",controladorAdmin.panel);
 router.get("/crear",controladorAdmin.crear);
 router.post("/crear",subirArchivo.single("foto"),controladorAdmin.guardarCreado);
+router.get("/resultado",controladorAdmin.buscar);
+router.get("/producto/:id",(req,res)=>{res.send("funciona la ruta")})
 
-module.exports = router
+module.exports = router;

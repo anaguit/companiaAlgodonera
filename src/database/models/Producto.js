@@ -35,6 +35,10 @@ function productoData(sequelize,Datatypes){
         oferta:{
             type:Datatypes.STRING(20),
             allowNull:true
+        },
+        codigo:{
+            type:Datatypes.STRING(100),
+            allowNull:false
         }
     };
 

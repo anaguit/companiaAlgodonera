@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../parciales/head") %>
+<body>
+    <%- include("../parciales/header") %>
+    <main>
+        <p>Producto: <%= producto.tipo %></p>
+        <p>Marca: <%= producto.marca %></p>
+        <p>Descripción: <%= producto.descripcion %></p>
+        <p>Codigo: <%= producto.codigo %></p>
+        <p>Precio: <%= producto.precio %></p>
+        <p>Destacado: <%= producto.destacado %></p>
+        <p>En oferta: <%= producto.oferta %></p>
+        <p>Foto: <%= producto.foto %></p>
+        <button><a href="/admin/producto/<%= producto.codigo %>">Editar</a></button>
+    </main>
+    <%- include("../parciales/footer") %>
+</body>
+</html>

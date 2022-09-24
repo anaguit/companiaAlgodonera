@@ -1,4 +1,5 @@
 const db = require("../database/models");
+const Op = db.Sequelize.Op;
 
 const controladorAdmin = {
     panel:(req,res)=>{
@@ -15,9 +16,22 @@ const controladorAdmin = {
             precio:req.body.precio,
             foto:req.file.path,
             destacado:req.body.destacado,
-            oferta:req.body.oferta
+            oferta:req.body.oferta,
+            codigo:req.body.codigo
         }).then((resultado)=>{
             res.render("creadoExitoso");
+        })
+    },
+    buscar:(req,res)=>{
+        db.Producto.findOne({
+            where:{codigo:req.query.codigo}
+        }).then((producto)=>{
+            if(producto != null){
+                res.render("encontrado",{producto})
+            }
+                else{
+                    res.render("noEncontrado")
+                }
         })
     }
 };
