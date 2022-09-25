@@ -4,8 +4,12 @@
 <body>
     <%- include("../parciales/header") %>
     <main>
-        <p>Producto: <%= producto.tipo %></p>
+        <p>Producto: <%= producto.nombre %></p>
+        <p>Modelo: <%= producto.modelo %></p>
         <p>Marca: <%= producto.marca %></p>
+        <p>Categoría: <%= producto.idCategorias %></p>
+        <p>Tamaño: <%= producto.idTamanios %></p>
+        <p>Medidas: <%= producto.medidas %></p>
         <p>Descripción: <%= producto.descripcion %></p>
         <p>Codigo: <%= producto.codigo %></p>
         <p>Precio: <%= producto.precio %></p>
@@ -13,6 +17,9 @@
         <p>En oferta: <%= producto.oferta %></p>
         <p>Foto: <%= producto.foto %></p>
         <button><a href="/admin/producto/<%= producto.codigo %>">Editar</a></button>
+        <form action="/admin/producto/<%= producto.codigo %>?_method=DELETE" method="POST">
+            <button type="submit">Borrar</button>
+        </form>
     </main>
     <%- include("../parciales/footer") %>
 </body>

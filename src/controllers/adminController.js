@@ -37,11 +37,20 @@ const controladorAdmin = {
             where:{codigo:req.query.codigo}
         }).then((producto)=>{
             if(producto != null){
-                res.render("encontrado",{producto})
+                res.render("detalle",{producto})
             }
                 else{
                     res.render("noEncontrado")
                 }
+        })
+    },
+    borrar:(req,res)=>{
+        db.Producto.destroy({
+            where:{codigo:req.params.id}
+        })
+        .then((producto)=>{
+            console.log(producto)
+            res.render("borradoExitoso")
         })
     }
 };
