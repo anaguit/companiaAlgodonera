@@ -16,14 +16,18 @@ const controladorAdmin = {
     },
     guardarCreado:(req,res)=>{
         db.Producto.create({
-            tipo:req.body.tipo,
+            nombre:req.body.nombre,
+            modelo:req.body.modelo,
             marca:req.body.marca,
             descripcion:req.body.descripcion,
             precio:req.body.precio,
             foto:req.file.path,
             destacado:req.body.destacado,
             oferta:req.body.oferta,
-            codigo:req.body.codigo
+            codigo:req.body.codigo,
+            medidas:req.body.medidas,
+            idTamanios:req.body.tamanio,
+            idCategorias:req.body.categoria
         }).then((resultado)=>{
             res.render("creadoExitoso");
         })

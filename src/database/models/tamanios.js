@@ -20,9 +20,16 @@ function TamaniosData(sequelize,Datatypes){
         timestamps:false
     };
 
-    const tamanios = sequelize.define(alias,cols,config);
+    const Tamanios = sequelize.define(alias,cols,config);
 
-    return tamanios;
+    Tamanios.associate = function(modelos){
+        Tamanios.hasMany(modelos.Producto,{
+            as:"tamanioProducto",
+            foreignKey:"idTamanios"
+        })
+    }
+
+    return Tamanios;
 };
 
 module.exports = TamaniosData;

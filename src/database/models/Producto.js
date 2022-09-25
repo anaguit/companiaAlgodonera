@@ -55,9 +55,23 @@ function productoData(sequelize,Datatypes){
         tableName:"productos"
     };
 
-    const producto = sequelize.define(alias,cols,config);
+    const Producto = sequelize.define(alias,cols,config);
 
-    return producto;
+    Producto.associate = function(modelos){
+        Producto.belongsTo(modelos.Tamanios,{
+            as:"productoTamanio",
+            foreignKey:"idTamanios"
+        });
+    };
+
+    Producto.associate = function(modelos){
+        Producto.belongsTo(modelos.Categorias,{
+            as:"productoCategoria",
+            foreignKey:"idCategorias"
+        });
+    };
+
+    return Producto;
 };
 
 module.exports = productoData;

@@ -19,9 +19,16 @@ function CategoriasData(sequelize,Datatypes){
         timestamps:false
     };
 
-    const categorias = sequelize.define(alias,cols,config);
+    const Categorias = sequelize.define(alias,cols,config);
 
-    return categorias;
+    Categorias.associate = function(modelos){
+        Categorias.hasMany(modelos.Producto,{
+            as:"categoriaProducto",
+            foreignKey:"idCategoria"
+        });
+    };
+    
+    return Categorias;
 };
 
 module.exports = CategoriasData;
