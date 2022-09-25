@@ -8,7 +8,11 @@ function productoData(sequelize,Datatypes){
             primaryKey:true,
             allowNull:false
         },
-        tipo:{
+        nombre:{
+            type:Datatypes.STRING(50),
+            allowNull:false
+        },
+        modelo:{
             type:Datatypes.STRING(50),
             allowNull:false
         },
@@ -39,12 +43,16 @@ function productoData(sequelize,Datatypes){
         codigo:{
             type:Datatypes.STRING(100),
             allowNull:false
+        },
+        medidas:{
+            type:Datatypes.STRING(50),
+            allowNull:true
         }
     };
 
     const config = {
         timestamps:false,
-        tableName:"producto"
+        tableName:"productos"
     };
 
     const producto = sequelize.define(alias,cols,config);

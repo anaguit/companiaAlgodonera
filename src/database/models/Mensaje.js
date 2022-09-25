@@ -28,7 +28,7 @@ function mensajeData(sequelize,Datatypes){
 
     const config = {
         timestamps:false,
-        tableName:"mensaje"
+        tableName:"mensajes"
     };
 
     const Mensaje = sequelize.define(alias,cols,config);
