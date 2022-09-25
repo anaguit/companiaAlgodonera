@@ -29,12 +29,16 @@
             </div>
             <div class="inputsCrear">
                 <select name="categoria">
-                    <option></option>
+                    <% for(let categoria of categorias){ %>
+                        <option value="<%= categoria.id %>"><%= categoria.nombre %></option>
+                    <% } %>
                 </select>
             </div>
             <div class="inputsCrear">
                 <select name="tamanio">
-                    <option></option>
+                    <% for(let tamanio of tamanios){ %>
+                        <option value="<%= tamanio.id %>"><%= tamanio.tamanio %></option>
+                        <% } %>
                 </select>
             </div>
             <div class="inputsCrear">

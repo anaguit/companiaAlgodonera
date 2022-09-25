@@ -6,7 +6,13 @@ const controladorAdmin = {
         res.render("panel");
     },
     crear:(req,res)=>{
-        res.render("crear");
+        db.Categorias.findAll()
+        .then((categorias)=>{
+            db.Tamanios.findAll()
+            .then((tamanios)=>{
+                res.render("crear",{categorias,tamanios});       
+            });
+        });
     },
     guardarCreado:(req,res)=>{
         db.Producto.create({
