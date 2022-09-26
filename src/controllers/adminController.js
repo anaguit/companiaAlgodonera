@@ -1,6 +1,7 @@
 const db = require("../database/models");
 const Op = db.Sequelize.Op;
-
+const fs = require("fs");
+const path = require("path");
 const controladorAdmin = {
     panel:(req,res)=>{
         res.render("panel");
@@ -45,13 +46,25 @@ const controladorAdmin = {
         })
     },
     borrar:(req,res)=>{
-        db.Producto.destroy({
-            where:{codigo:req.params.id}
+        db.Producto.findOne({
+            where:{codigo:req.params.codigo}
+        })
+        .then((productoEncontrado)=>{
+           fs.unlinkSync(productoEncontrado.foto);
+           db.Producto.destroy({
+            where:{codigo:req.params.codigo}
+        })
+        .then((producto)=>{
+            res.render("borradoExitoso")
+        })
+        })
+        /*db.Producto.destroy({
+            where:{codigo:req.params.codigo}
         })
         .then((producto)=>{
             console.log(producto)
             res.render("borradoExitoso")
-        })
+        })*/
     }
 };
 
