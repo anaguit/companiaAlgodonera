@@ -4,6 +4,22 @@
 <body>
     <%- include("../parciales/header") %>
     <main>
+        <h1>Destacados</h1>
+        <div class="destacados">
+            <% for(let destacado of destacados){ %>
+                <div class="productoDestacado">
+                    <p><%= destacado.nombre %> <%= destacado.modelo %> $<%= destacado.precio %></p>
+                </div>
+            <% } %>
+        </div>
+        <h1>Ofertas</h1>
+        <div class="oferta">
+                <% for(let oferta of ofertas){ %>
+                    <div class="productoOferta">
+                        <p><%= oferta.nombre %> <%= oferta.modelo %> $<%= oferta.precio %></p>
+                    </div>
+                <% } %>
+        </div>
         <h1><a href="/contacto">Contactanos</a></h1>
         <a href="/admin">Administrador</a>
     </main>

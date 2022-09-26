@@ -2,7 +2,16 @@ const db = require("../database/models");
 
 const controladorCliente = {
     inicio:(req,res)=>{
-        res.render("inicio")
+        const enDestacados = db.Producto.findAll({
+            where:{destacado:"si"}
+        });
+        const enOfertas = db.Producto.findAll({
+            where:{oferta:"si"}
+        });
+        Promise.all([enDestacados,enOfertas])
+        .then(([destacados,ofertas])=>{
+            res.render("inicio",{destacados,ofertas});
+        });
     },
     contactar:(req,res)=>{
         res.render("contactanos");
