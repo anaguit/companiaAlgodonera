@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../parciales/head") %>
+<body>
+    <%- include("../parciales/header") %>
+    <main>
+        <h3>Editar producto <%= producto.codigo %></h3>
+        <form action="/admin/producto/:<%= producto.codigo %>?_method=DELETE" method="POST">
+            <div class="inputsEditar">
+                <input type="text" name="codigo" value="<%= producto.codigo %>">
+            </div>
+            <div class="inputsEditar">
+                <input type="text" name="nombre" value="<%= producto.nombre %>">
+            </div>
+            <div class="inputsEditar">
+                <input type="text" name="modelo" value="<%= producto.modelo %>">
+            </div>
+            <div class="inputsEditar">
+                <input type="text" name="marca" value="<%= producto.marca %>">
+            </div>
+            <div class="inputsEditar">
+                <textarea name="descripcion" value="<%= producto.descripcion %>"></textarea>
+            </div>
+            <div class="inputsEditar">
+                <input type="text" name="precio" value="<%= producto.precio %>">
+            </div>
+            <div class="inputsEditar">
+                <input type="text" name="medidas" value="<%= producto.medidas %>">
+            </div>
+            <div class="inputsEditar">
+                <select name="categoria">
+                    <option value="" >Seleccioná opción</option> 
+                    <% for(let categoria of categorias) { %> 
+                        <option value="<%= categoria.id %>" <%= categoria.id === producto.idCategorias ? 'selected' : "" %>>
+                            <%= categoria.nombre %></option>
+                    <% } %>
+                </select>
+            </div>
+            <div class="inputsEditar">
+                <select name="tamanio">
+                    <option value="">Seleccioná tamaño</option>
+                    <% for(let tamanio of tamanios){ %>
+                        <option value="<%= tamanio.id %>" <%= tamanio.id === producto.idTamanios ? 'selected' : "" %>>
+                            <%= tamanio.tamanio %></option>
+                    <% } %>
+                </select>
+            </div>
+            <div class="inputsEditar">
+                <input type="radio" name="destacado" value="si" <%= producto.destacado ==='si'?'checked':"" %>>Destacado
+                <input type="radio" name="destacado" value="no" <%= producto.destacado === 'no'?'checked':"" %>>No destacado
+            </div>
+            <div class="inputsEditar">
+                <input type="radio" name="oferta" value="si" <%= producto.oferta === "si"?'checked':"" %>>En oferta
+                <input type="radio" name="oferta" value="no" <%= producto.oferta === "no"?'checked':"" %>>Sin oferta
+            </div>
+            <div class="inputsEditar">
+                <input type="file" name="foto">
+            </div>
+            <div class="botonesEditar">
+                <button type="submit">Enviar</button>
+                <button type="reset">Cancelar</button>
+            </div>
+        </form>
+    </main>
+    <%- include("../parciales/footer") %>
+</body>
+</html>

@@ -33,13 +33,29 @@ const controladorAdmin = {
             res.render("creadoExitoso");
         })
     },
+    editar:(req,res)=>{
+        const pedidoCategorias = db.Categorias.findAll();
+        const pedidoTamanios = db.Tamanios.findAll();
+        db.Producto.findOne({
+            where:{codigo:req.params.codigo}
+        })
+        .then((producto)=>{
+            Promise.all([pedidoCategorias,pedidoTamanios])
+            .then(([categorias,tamanios])=>{
+                res.render("editar",{producto,categorias,tamanios});
+            });
+        });
+    },
+    guardarEditado:(req,res)=>{
+
+    },
     buscar:(req,res)=>{
         db.Producto.findOne({
             where:{codigo:req.query.codigo}
         }).then((producto)=>{
             if(producto != null){
                 res.render("detalle",{producto})
-            }
+            } 
                 else{
                     res.render("noEncontrado")
                 }
