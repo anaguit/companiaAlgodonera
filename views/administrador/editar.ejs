@@ -5,7 +5,7 @@
     <%- include("../parciales/header") %>
     <main>
         <h3>Editar producto <%= producto.codigo %></h3>
-        <form action="/admin/producto/:<%= producto.codigo %>?_method=DELETE" method="POST">
+        <form action="/admin/producto/<%= producto.codigo %>?_method=PUT" method="POST" enctype="multipart/form-data">
             <div class="inputsEditar">
                 <input type="text" name="codigo" value="<%= producto.codigo %>">
             </div>
@@ -19,7 +19,7 @@
                 <input type="text" name="marca" value="<%= producto.marca %>">
             </div>
             <div class="inputsEditar">
-                <textarea name="descripcion" value="<%= producto.descripcion %>"></textarea>
+                <textarea name="descripcion"><%= producto.descripcion %></textarea>
             </div>
             <div class="inputsEditar">
                 <input type="text" name="precio" value="<%= producto.precio %>">
@@ -54,7 +54,7 @@
                 <input type="radio" name="oferta" value="no" <%= producto.oferta === "no"?'checked':"" %>>Sin oferta
             </div>
             <div class="inputsEditar">
-                <input type="file" name="foto">
+                <input type="file" name="foto" accept=".jpg,.jpeg">
             </div>
             <div class="botonesEditar">
                 <button type="submit">Enviar</button>

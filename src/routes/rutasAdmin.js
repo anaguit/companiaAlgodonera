@@ -21,7 +21,7 @@ router.get("/crear",controladorAdmin.crear);
 router.post("/crear",subirArchivo.single("foto"),controladorAdmin.guardarCreado);
 router.get("/resultado",controladorAdmin.buscar);
 router.get("/producto/:codigo",controladorAdmin.editar);
-router.put("/producto/:codigo",controladorAdmin.guardarEditado);
+router.put("/producto/:codigo",subirArchivo.single("foto"),controladorAdmin.guardarEditado);
 router.delete("/producto/:codigo",controladorAdmin.borrar);
 
 module.exports = router;
