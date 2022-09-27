@@ -26,6 +26,9 @@ const controladorCliente = {
             res.send(req.body);
             })
         //res.send(req.body)
+    },
+    detalle:(req,res)=>{
+        res.send("detalle a desarrollar");
     }
 };
 

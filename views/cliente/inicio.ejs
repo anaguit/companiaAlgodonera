@@ -8,7 +8,7 @@
         <div class="destacados">
             <% for(let destacado of destacados){ %>
                 <div class="productoDestacado">
-                    <p><%= destacado.nombre %> <%= destacado.modelo %> $<%= destacado.precio %></p>
+                    <a href="/producto/<%= destacado.codigo %>"><%= destacado.nombre %> <%= destacado.modelo %> $<%= destacado.precio %></a>
                 </div>
             <% } %>
         </div>
@@ -16,7 +16,7 @@
         <div class="oferta">
                 <% for(let oferta of ofertas){ %>
                     <div class="productoOferta">
-                        <p><%= oferta.nombre %> <%= oferta.modelo %> $<%= oferta.precio %></p>
+                        <a href="/producto/<%= oferta.codigo %>"><%= oferta.nombre %> <%= oferta.modelo %> $<%= oferta.precio %></a>
                     </div>
                 <% } %>
         </div>
