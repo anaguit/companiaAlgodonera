@@ -7,27 +7,34 @@
         <h1>Crear producto</h1>
         <form action="/admin/crear" method="POST" enctype="multipart/form-data">
             <div class="inputsCrear">
+                <p style="color:red"><%= locals.errores && errores.codigo ? errores.codigo.msg:"" %></p>
                 <input type="text" name="codigo" placeholder="codigo">
             </div>
             <div class="inputsCrear">
+                <p style="color:red"><%= locals.errores && errores.nombre ? errores.nombre.msg:"" %></p>
                 <input type="text" name="nombre" placeholder="producto">
             </div>
             <div class="inputsCrear">
+                <p style="color:red"><%= locals.errores && errores.modelo ? errores.modelo.msg : "" %></p>
                 <input type="text" name="modelo" placeholder="modelo">
             </div>
             <div class="inputsCrear">
+                <p style="color:red"><%= locals.errores && errores.marca ? errores.marca.msg : "" %></p>
                 <input type="text" name="marca" placeholder="marca">
             </div>
             <div class="inputsCrear">
+                <p style="color:red"><%= locals.errores && errores.descripcion ? errores.descripcion.msg : "" %></p>
                 <textarea name="descripcion" placeholder="descripcion"></textarea>
             </div>
             <div class="inputsCrear">
                 <input type="text" name="precio" placeholder="precio">
             </div>
             <div class="inputsCrear">
+                <p style="color:red"><%= locals.errores && errores.medidas ? errores.medidas.msg : "" %></p>
                 <input type="text" name="medidas" placeholder="medidas">
             </div>
             <div class="inputsCrear">
+                <p style="color:red"><%= locals.errores && errores.categoria ? errores.categoria.msg : "" %></p>
                 <select name="categoria">
                     <option>Seleccioná una categoría</option>
                     <% for(let categoria of categorias){ %>
@@ -36,6 +43,7 @@
                 </select>
             </div>
             <div class="inputsCrear">
+                <p style="color:red"><%= locals.errores && errores.tamanio ? errores.tamanio.msg : "" %></p>
                 <select name="tamanio">
                     <option>Seleccioná un tamaño</option>
                     <% for(let tamanio of tamanios){ %>
@@ -44,10 +52,12 @@
                 </select>
             </div>
             <div class="inputsCrear">
+                <p style="color:red"><%= locals.errores && errores.destacado ? errores.destacado.msg : "" %></p>
                 <input type="radio" name="destacado" value="si">Destacado
                 <input type="radio" name="destacado" value="no">No destacado
             </div>
             <div class="inputsCrear">
+                <p style="color:red"><%= locals.errores && errores.oferta ? errores.oferta.msg : "" %></p>
                 <input type="radio" name="oferta" value="si">En oferta
                 <input type="radio" name="oferta" value="no">Sin oferta
             </div>
