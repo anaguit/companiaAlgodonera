@@ -28,7 +28,13 @@ const controladorCliente = {
         //res.send(req.body)
     },
     detalle:(req,res)=>{
-        res.send("detalle a desarrollar");
+        db.Producto.findOne({
+            where:{codigo:req.params.codigo},
+            //include:[{association:"productoCategoria"}]
+        })
+        .then((producto)=>{
+            res.render("detalleCliente",{producto})
+        })
     }
 };
 

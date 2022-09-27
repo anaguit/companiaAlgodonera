@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../parciales/head") %>
+<body>
+    <%- include("../parciales/header") %>
+    <main>
+        <h3><%= producto.nombre %> <%= producto.modelo %></h3>
+        <div>
+            <p><%= producto.descripcion %></p>
+            <p>tamaño: FALTA OBTENER EL DATO<%= %></p>
+            <p>medidas: <%= producto.medidas %></p>
+            <p>marca: <%= producto.marca %></p>
+            <p>$ <%= producto.precio %></p>
+            <p>imagen: <%= producto.foto %></p> 
+        </div>
+        <p>Si querés comprar nuestros productos visitanos <a href="https://www.smn.gob.ar">acá</a></p>
+    </main>
+    <%- include("../parciales/footer") %>
+</body>
+</html>
