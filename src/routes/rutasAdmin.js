@@ -1,5 +1,6 @@
 const express = require("express");
 const controladorAdmin = require("../controllers/adminController");
+const validacionesCrear = require("../middlewares/validacionCrear");
 const router = express.Router();
 const multer = require("multer");
 const path = require("path");
@@ -18,7 +19,7 @@ const subirArchivo = multer({storage:multerDiskStorage});
 
 router.get("/",controladorAdmin.panel);
 router.get("/crear",controladorAdmin.crear);
-router.post("/crear",subirArchivo.single("foto"),controladorAdmin.guardarCreado);
+router.post("/crear",validacionesCrear,subirArchivo.single("foto"),controladorAdmin.guardarCreado);
 router.get("/resultado",controladorAdmin.buscar);
 router.get("/producto/:codigo",controladorAdmin.editar);
 router.put("/producto/:codigo",subirArchivo.single("foto"),controladorAdmin.guardarEditado);
