@@ -42,7 +42,9 @@ const controladorAdmin = {
             const pedidoTamanios = db.Tamanios.findAll();
             Promise.all([pedidoCategorias,pedidoTamanios])
                 .then(([categorias,tamanios])=>{
-                    res.render("crear",{errores:errores.mapped(),categorias,tamanios});
+                    //res.send(errores.mapped())
+                    console.log(req.body)
+                    res.render("crear",{errores:errores.mapped(),categorias,tamanios,data:req.body});
                 });
         };
     },
