@@ -52,9 +52,10 @@ const controladorCliente = {
     detalle:(req,res)=>{
         db.Producto.findOne({
             where:{codigo:req.params.codigo},
-            //include:[{association:"productoCategoria"}]
+            include:[{association:"productoCategoria"}/*,{association:"productoTamanio"}*/]
         })
         .then((producto)=>{
+            //res.send(producto)
             res.render("detalleCliente",{producto})
         })
     }

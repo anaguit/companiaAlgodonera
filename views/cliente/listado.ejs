@@ -6,21 +6,27 @@
     <main>
         <div class="categorias">
             <h3>Sábanas</h3>
+            <ul>
             <% for(let sabana of sabanas){ %>
-                <p><%= sabana.nombre %> <%= sabana.modelo %></p>
+                <li><a href="/producto/<%= sabana.codigo %>"><%= sabana.nombre %> <%= sabana.modelo %></a></li>
             <% } %>
+            </ul>
         </div>
         <div class="categorias">
             <h3>Fundas</h3>
+            <ul>
             <% for(let funda of fundas){ %>
-                <p><%= funda.nombre %> <%= funda.modelo %></p> 
+                <li><a href="/producto/<%= funda.codigo %>"><%= funda.nombre %> <%= funda.modelo %><a></li> 
             <% } %>
+            </ul>
         </div>
         <div class="categorias">
             <h3>acolchados</h3>
+            <ul>
             <% for(let acolchado of acolchados){ %>
-                <p><%= acolchado.nombre %> <%= acolchado.modelo %></p> 
+                <li><a href="/producto/<%= acolchado.codigo %>"><%= acolchado.nombre %> <%= acolchado.modelo %></a></li> 
             <% } %>
+            </ul>
         </div>
     </main>
     <%- include("../parciales/footer") %>
