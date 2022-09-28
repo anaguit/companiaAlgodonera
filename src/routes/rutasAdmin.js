@@ -19,6 +19,7 @@ const subirArchivo = multer({storage:multerDiskStorage});
 
 router.get("/",controladorAdmin.panel);
 router.get("/crear",controladorAdmin.crear);
+router.get("/productos",controladorAdmin.listarProductos)
 router.post("/crear",subirArchivo.single("foto"),validacionesCrear,controladorAdmin.guardarCreado);
 router.get("/resultado",controladorAdmin.buscar);
 router.get("/producto/:codigo",controladorAdmin.editar);

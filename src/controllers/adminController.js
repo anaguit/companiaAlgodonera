@@ -8,6 +8,13 @@ const controladorAdmin = {
     panel:(req,res)=>{
         res.render("panel");
     },
+    listarProductos:(req,res)=>{
+        db.Producto.findAll()
+            .then((productos)=>{
+                res.render("listaProductos",{productos});
+            });
+
+    },
     crear:(req,res)=>{
         db.Categorias.findAll()
         .then((categorias)=>{

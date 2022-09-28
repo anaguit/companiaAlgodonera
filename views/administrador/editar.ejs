@@ -2,7 +2,7 @@
 <html lang="en">
 <%- include("../parciales/head") %>
 <body>
-    <%- include("../parciales/header") %>
+    <%- include("../parciales/headerAdmin") %>
     <main>
         <h3>Editar producto <%= producto.codigo %></h3>
         <form action="/admin/producto/<%= producto.codigo %>?_method=PUT" method="POST" enctype="multipart/form-data">

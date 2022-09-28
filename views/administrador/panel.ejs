@@ -2,14 +2,10 @@
 <html lang="en">
 <%- include("../parciales/head") %>
 <body>
-    <%- include("../parciales/header") %>
+    <%- include("../parciales/headerAdmin") %>
     <main>
-        <h5>Buscar</h5>
-        <form action="/admin/resultado" method="GET">
-            <input type="text" name="codigo" placeholder="Codigo">
-            <button type="submit">Buscar</button>
-        </form>
         <h3>Los links de operaciones</h3>
+        <a href="/admin/productos">Ver listado de productos</a>
         <a href="/admin/crear">Cargar producto</a>
     </main>
     <%- include("../parciales/footer") %>
