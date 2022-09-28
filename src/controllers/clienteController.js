@@ -14,6 +14,21 @@ const controladorCliente = {
             res.render("inicio",{destacados,ofertas});
         });
     },
+    listado:(req,res)=>{
+        const categSabanas = db.Producto.findAll({
+            where:{idCategorias:1}
+        });
+        const categFundas = db.Producto.findAll({
+            where:{idCategorias:2}
+        });
+        const categAcolchados = db.Producto.findAll({
+            where:{idCategorias:3}
+        });
+        Promise.all([categSabanas,categFundas,categAcolchados])
+            .then(([sabanas,fundas,acolchados])=>{
+                res.render("listado",{sabanas,acolchados,fundas})
+            });
+    },
     contactar:(req,res)=>{
         res.render("contactanos");
     },

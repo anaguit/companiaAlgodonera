@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../parciales/head") %>
+<body>
+    <%- include("../parciales/header") %>
+    <main>
+        <div class="categorias">
+            <h3>Sábanas</h3>
+            <% for(let sabana of sabanas){ %>
+                <p><%= sabana.nombre %> <%= sabana.modelo %></p>
+            <% } %>
+        </div>
+        <div class="categorias">
+            <h3>Fundas</h3>
+            <% for(let funda of fundas){ %>
+                <p><%= funda.nombre %> <%= funda.modelo %></p> 
+            <% } %>
+        </div>
+        <div class="categorias">
+            <h3>acolchados</h3>
+            <% for(let acolchado of acolchados){ %>
+                <p><%= acolchado.nombre %> <%= acolchado.modelo %></p> 
+            <% } %>
+        </div>
+    </main>
+    <%- include("../parciales/footer") %>
+</body>
+</html>
