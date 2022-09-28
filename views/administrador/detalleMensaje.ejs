@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../parciales/head") %>
+<body>
+    <%- include("../parciales/headerAdmin") %>
+    <main>
+        <h4>Detalle mensaje</h4>
+        <p><%= mensaje.nombre %></p>
+        <p><%= mensaje.mail %></p>
+        <p><%= mensaje.asunto %></p>
+        <p><%= mensaje.texto %></p>
+        <a href="/admin">Volver</a>
+    </main>
+    <%- include("../parciales/footer") %>
+</body>
+</html>

@@ -25,5 +25,6 @@ router.get("/resultado",controladorAdmin.buscar);
 router.get("/producto/:codigo",controladorAdmin.editar);
 router.put("/producto/:codigo",subirArchivo.single("foto"),controladorAdmin.guardarEditado);
 router.delete("/producto/:codigo",controladorAdmin.borrar);
-
+router.get("/mensajes",controladorAdmin.verMensajes);
+router.get("/mensaje/:id",controladorAdmin.detalleMensaje);
 module.exports = router;

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../parciales/head") %>
+<body>
+    <%- include("../parciales/headerAdmin") %>
+    <main>
+        <h1>Mensajes de visitantes</h1>
+        <ul>
+            <% for(let mensaje of mensajes){ %>
+                <li><a href="/admin/mensaje/<%= mensaje.id %>"><%= mensaje.nombre %> <%= mensaje.asunto %> <%= mensaje.mail %></a></li>
+            <% } %>
+        </ul>
+        <a href="/admin">Volver</a>
+    </main>
+    <%- include("../parciales/footer") %>
+</body>
+</html>

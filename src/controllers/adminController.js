@@ -121,6 +121,20 @@ const controladorAdmin = {
             console.log(producto)
             res.render("borradoExitoso")
         })*/
+    },
+    verMensajes:(req,res)=>{
+        db.Mensaje.findAll()
+            .then((mensajes)=>{
+                res.render("mensajes",{mensajes})
+            });
+    },
+    detalleMensaje:(req,res)=>{
+        db.Mensaje.findOne({
+            where:{id:req.params.id}
+        })
+        .then((mensaje)=>{
+            res.render("detalleMensaje",{mensaje})
+        });
     }
 };
 
