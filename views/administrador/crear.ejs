@@ -38,7 +38,7 @@
                 <select name="categoria">
                     <option value="">Seleccioná una categoría</option>
                     <% for(let categoria of categorias){ %>
-                        <option value="<%= categoria.id %>"><%= categoria.nombre %></option>
+                        <option value="<%= categoria.id %>" <%= locals.data && (data.categoria == categoria.id) ? "selected":null %>><%= categoria.nombre %></option>
                     <% } %>
                 </select>
             </div>
@@ -47,19 +47,19 @@
                 <select name="tamanio">
                     <option value="">Seleccioná un tamaño</option>
                     <% for(let tamanio of tamanios){ %>
-                        <option value="<%= tamanio.id %>"><%= tamanio.tamanio %></option>
+                        <option value="<%= tamanio.id %>" <%= locals.data && (data.tamanio == tamanio.id) ? "selected":null %>><%= tamanio.tamanio %></option>
                     <% } %>
                 </select>
             </div>
             <div class="inputsCrear">
                 <p style="color:red"><%= locals.errores && errores.destacado ? errores.destacado.msg : "" %></p>
-                <input type="radio" name="destacado" value="si">Destacado
-                <input type="radio" name="destacado" value="no">No destacado
+                <input type="radio" name="destacado" value="si" <%= locals.data && (data.destacado == "si") ? "checked" : "" %>>Destacado
+                <input type="radio" name="destacado" value="no" <%= locals.data && (data.destacado == "no") ? "checked" : "" %>>No destacado
             </div>
             <div class="inputsCrear">
                 <p style="color:red"><%= locals.errores && errores.oferta ? errores.oferta.msg : "" %></p>
-                <input type="radio" name="oferta" value="si">En oferta
-                <input type="radio" name="oferta" value="no">Sin oferta
+                <input type="radio" name="oferta" value="si" <%= locals.data && (data.oferta == "si") ? "checked":"" %>>En oferta
+                <input type="radio" name="oferta" value="no"<%= locals.data && (data.oferta == "no") ? "checked":"" %>>Sin oferta
             </div>
             <div class="inputsCrear">
                 <input type="file" name="foto" accept=".jpeg, .jpg">

@@ -16,7 +16,8 @@
         <div class="oferta">
                 <% for(let oferta of ofertas){ %>
                     <div class="productoOferta">
-                        <a href="/producto/<%= oferta.codigo %>"><%= oferta.nombre %> <%= oferta.modelo %> $<%= oferta.precio %></a>
+                        <a href="/producto/<%= oferta.codigo %>"><%= oferta.nombre %> <%= oferta.modelo %> $<%= oferta.precio %> 
+                            <!-- <%= oferta.precio != null ? oferta.precio : "" %> --></a> 
                     </div>
                 <% } %>
         </div>
