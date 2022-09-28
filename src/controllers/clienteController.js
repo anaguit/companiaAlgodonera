@@ -1,3 +1,4 @@
+const { validationResult } = require("express-validator");
 const db = require("../database/models");
 
 const controladorCliente = {
@@ -17,15 +18,21 @@ const controladorCliente = {
         res.render("contactanos");
     },
     enviarMensaje:(req,res)=>{
-        db.Mensaje.create({
-            nombre:req.body.nombre,
-            mail:req.body.mail,
-            asunto:req.body.asunto,
-            texto:req.body.mensaje
-        }).then((resultado)=>{
-            res.send(req.body);
-            })
-        //res.send(req.body)
+        const errores = validationResult(req);
+        
+        if(errores.isEmpty()){
+            db.Mensaje.create({
+                nombre:req.body.nombre,
+                mail:req.body.mail,
+                asunto:req.body.asunto,
+                texto:req.body.mensaje
+            }).then((persona)=>{
+                res.render("mensajeEnviado",{persona});
+                })
+        }
+            else{
+                res.render("contactanos",{errores:errores.mapped(),data:req.body});
+            }
     },
     detalle:(req,res)=>{
         db.Producto.findOne({

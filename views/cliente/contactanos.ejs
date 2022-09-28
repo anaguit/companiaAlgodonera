@@ -8,16 +8,20 @@
         <h1>Dejanos tu mensaje</h1>
         <form action="/contacto" method="POST">
             <div class="inputsContacto">
-                <input type="text" name="nombre" placeholder="nombre">
+                <p style="color:red"><%= locals.errores && errores.nombre ? errores.nombre.msg : "" %></p>
+                <input type="text" name="nombre" placeholder="nombre" value="<%= locals.data && data.nombre ? data.nombre : '' %>">
             </div>
             <div class="inputsContacto">
-                <input type="text" name="mail" placeholder="mail">
+                <p style="color:red"><%= locals.errores && errores.mail ? errores.mail.msg : "" %></p>
+                <input type="text" name="mail" placeholder="mail" value="<%= locals.data && data.mail ? data.mail : '' %>">
             </div>
             <div class="inputsContacto">
-                <input type="text" name="asunto" placeholder="asunto">
+                <p style="color:red"><%= locals.errores && errores.asunto ? errores.asunto.msg : "" %></p>
+                <input type="text" name="asunto" placeholder="asunto" value="<%= locals.data && data.asunto ? data.asunto : '' %>">
             </div>
             <div class="inputsContacto">
-                <textarea name="mensaje" placeholder="dejanos tu mensaje"></textarea>
+                <p style="color:red"><%= locals.errores && errores.mensaje ? errores.mensaje.msg : "" %></p>
+                <textarea name="mensaje" placeholder="dejanos tu mensaje"><%= locals.data && data.mensaje ? data.mensaje : '' %></textarea>
             </div>
             <div class="botonesContacto">
                 <button type="submit">Enviar</button>
