@@ -9,7 +9,10 @@
         <p><%= mensaje.mail %></p>
         <p><%= mensaje.asunto %></p>
         <p><%= mensaje.texto %></p>
-        <a href="/admin">Volver</a>
+        <form action="/admin/mensaje/<%= mensaje.id %>?_method=DELETE" method="POST">
+            <button type="submit">Eliminar</button>
+        </form>
+        <a href="/admin/mensajes">Volver a los mensajes</a>
     </main>
     <%- include("../parciales/footer") %>
 </body>

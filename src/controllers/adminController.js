@@ -135,7 +135,14 @@ const controladorAdmin = {
         .then((mensaje)=>{
             res.render("detalleMensaje",{mensaje})
         });
+    },
+    borrarMensaje:(req,res)=>{
+        db.Mensaje.destroy({
+            where:{id:req.params.id}
+        })
+        .then((mensaje)=>{
+            res.render("mensajeBorrado",{mensaje});
+        });
     }
 };
-
 module.exports = controladorAdmin;

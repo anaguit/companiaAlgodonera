@@ -7,7 +7,10 @@
         <h1>Mensajes de visitantes</h1>
         <ul>
             <% for(let mensaje of mensajes){ %>
-                <li><a href="/admin/mensaje/<%= mensaje.id %>"><%= mensaje.nombre %> <%= mensaje.asunto %> <%= mensaje.mail %></a></li>
+                <form action="/admin/mensaje/<%= mensaje.id %>?_method=DELETE" method="POST">
+                    <li><a href="/admin/mensaje/<%= mensaje.id %>"><%= mensaje.nombre %> <%= mensaje.asunto %> <%= mensaje.mail %></a></li>
+                    <button type="submit">Eliminar</button>
+                </form>
             <% } %>
         </ul>
         <a href="/admin">Volver</a>
