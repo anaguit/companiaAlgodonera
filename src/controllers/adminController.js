@@ -159,6 +159,18 @@ const controladorAdmin = {
     login:(req,res)=>{
         res.render("loguear")
     },
-    logueado:(req,res)=>{}
+    logueado:(req,res)=>{
+        db.Administrador.findOne({
+            where:{nombre:req.body.email}
+        }).then((administrador)=>{
+            if(administrador && bcrypt.compareSync(req.body.contrasenia,administrador.contrasenia)){
+                res.redirect("/admin")
+            }
+                else{
+                    let error = "credenciales invalidas"
+                    res.render("loguear",{error});
+                };
+        });
+    }
 };
 module.exports = controladorAdmin;
