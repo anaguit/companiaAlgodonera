@@ -3,7 +3,7 @@ const autorizado = (req,res,next)=>{
         next();
     }
         else{
-            res.send("acceso denegado");
+            res.redirect("/");
         };
 };
 
