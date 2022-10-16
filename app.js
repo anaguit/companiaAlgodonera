@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const methodOverride = require("method-override");
+const session = require("express-session");
 const rutasCliente = require("./src/routes/clienteRouter");
 const rutasAdmin = require("./src/routes/rutasAdmin");
 
@@ -9,6 +10,11 @@ app.use(express.static(path.join(__dirname,"./public")));
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
 app.use(methodOverride("_method"));
+app.use(session({
+    secret:"el secreto",
+    resave:false,
+    saveUninitialized:false
+}));
 app.use("/",rutasCliente);
 app.use("/admin",rutasAdmin);
 

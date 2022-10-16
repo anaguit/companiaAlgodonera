@@ -17,7 +17,7 @@ const multerDiskStorage = multer.diskStorage({
 
 const subirArchivo = multer({storage:multerDiskStorage});
 
-router.get("/",controladorAdmin.panel);
+router.get("/panel",controladorAdmin.panel);
 router.get("/crear",controladorAdmin.crear);
 router.get("/productos",controladorAdmin.listarProductos)
 router.post("/crear",subirArchivo.single("foto"),validacionesCrear,controladorAdmin.guardarCreado);
@@ -31,6 +31,7 @@ router.delete("/mensaje/:id",controladorAdmin.borrarMensaje);
 
 router.get("/registrar",controladorAdmin.registrar);
 router.post("/registrar",controladorAdmin.guardarRegistro);
-router.get("/login",controladorAdmin.login);
-router.post("/login",controladorAdmin.logueado);
+router.get("/",controladorAdmin.login);
+router.post("/",controladorAdmin.logueado);
+
 module.exports = router;

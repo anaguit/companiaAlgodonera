@@ -5,7 +5,7 @@
     <%- include("../parciales/headerAdmin") %>
     <main>
         <h2>Ingresa</h2>
-        <form action="/admin/login" method="POST">
+        <form action="/admin" method="POST">
             <p style="color:red"><%= locals.error ? error:"" %></p>
             <p>Email</p>
             <input type="text" name="email">

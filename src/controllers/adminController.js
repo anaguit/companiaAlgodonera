@@ -164,7 +164,8 @@ const controladorAdmin = {
             where:{nombre:req.body.email}
         }).then((administrador)=>{
             if(administrador && bcrypt.compareSync(req.body.contrasenia,administrador.contrasenia)){
-                res.redirect("/admin")
+                req.session.logueado = administrador
+                res.redirect("/admin/panel")
             }
                 else{
                     let error = "credenciales invalidas"
