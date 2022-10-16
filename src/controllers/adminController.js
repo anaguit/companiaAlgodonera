@@ -3,6 +3,7 @@ const Op = db.Sequelize.Op;
 const {validationResult} = require("express-validator");
 const fs = require("fs");
 const path = require("path");
+const bcrypt = require("bcryptjs");
 
 const controladorAdmin = {
     panel:(req,res)=>{
@@ -144,9 +145,20 @@ const controladorAdmin = {
             res.render("mensajeBorrado",{mensaje});
         });
     },
-    registrar:(req,res)=>{},
-    guardarRegistro:(req,res)=>{},
-    login:(req,res)=>{},
+    registrar:(req,res)=>{
+        res.render("registrar");
+    },
+    guardarRegistro:(req,res)=>{
+        db.Administrador.create({
+            nombre:req.body.email,
+            contrasenia:bcrypt.hashSync(req.body.contrasenia,10)
+        }).then((administrador)=>{
+            res.send(administrador)
+        });
+    },
+    login:(req,res)=>{
+        res.render("loguear")
+    },
     logueado:(req,res)=>{}
 };
 module.exports = controladorAdmin;

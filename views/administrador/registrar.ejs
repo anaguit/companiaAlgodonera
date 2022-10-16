@@ -4,12 +4,14 @@
 <body>
     <%- include("../parciales/headerAdmin") %>
     <main>
-        <h4>Registrar administrador</h4>
+        <h2>Registrar administrador</h2>
         <form action="/admin/registrar" method="POST">
-            <p>Mail</p>
-            <input type="text" name="mail">
+            <p>Email</p>
+            <input type="text" name="email">
             <p>Contraseña</p>
-            <input type="text" name="contrasenia">
+            <input type="password" name="contrasenia">
+            <button type="submit">Enviar</button>
+            <button type="reset">Cancelar</button>
         </form>
     </main>
     <%- include("../parciales/footer") %>
