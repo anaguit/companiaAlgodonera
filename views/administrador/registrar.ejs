@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../parciales/head") %>
+<body>
+    <%- include("../parciales/headerAdmin") %>
+    <main>
+        <h4>Registrar administrador</h4>
+        <form action="/admin/registrar" method="POST">
+            <p>Mail</p>
+            <input type="text" name="mail">
+            <p>Contraseña</p>
+            <input type="text" name="contrasenia">
+        </form>
+    </main>
+    <%- include("../parciales/footer") %>
+</body>
+</html>
