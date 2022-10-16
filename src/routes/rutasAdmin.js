@@ -27,5 +27,10 @@ router.put("/producto/:codigo",subirArchivo.single("foto"),controladorAdmin.guar
 router.delete("/producto/:codigo",controladorAdmin.borrar);
 router.get("/mensajes",controladorAdmin.verMensajes);
 router.get("/mensaje/:id",controladorAdmin.detalleMensaje);
-router.delete("/mensaje/:id",controladorAdmin.borrarMensaje)
+router.delete("/mensaje/:id",controladorAdmin.borrarMensaje);
+
+router.get("/registrar",controladorAdmin.registrar);
+router.post("/registrar",controladorAdmin.guardarRegistro);
+router.get("/login");
+router.post("/login");
 module.exports = router;

@@ -143,6 +143,10 @@ const controladorAdmin = {
         .then((mensaje)=>{
             res.render("mensajeBorrado",{mensaje});
         });
-    }
+    },
+    registrar:(req,res)=>{},
+    guardarRegistro:(req,res)=>{},
+    login:(req,res)=>{},
+    logueado:(req,res)=>{}
 };
 module.exports = controladorAdmin;
