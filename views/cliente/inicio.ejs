@@ -7,7 +7,7 @@
         <h3>Buscador</h3>
         <form action="/buscar/categoria" method="GET">
             <select name="categoria">
-                <option>Seleccioná categoría</option>
+                <option value="8">Seleccioná categoría</option>
             <% for(categoria of categorias){ %>
                 <option value="<%= categoria.id %>"><%= categoria.nombre %></option>
             <% } %>

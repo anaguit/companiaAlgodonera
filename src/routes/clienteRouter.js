@@ -8,5 +8,7 @@ router.get("/productos",controladorCliente.listado);
 router.get("/producto/:codigo",controladorCliente.detalle);
 router.get("/contacto",controladorCliente.contactar);
 router.post("/contacto",validacionContacto,controladorCliente.enviarMensaje);
+router.get("/buscar/categoria",controladorCliente.buscarCategoria);
+router.get("/buscar/tamanio",controladorCliente.buscarTamanio);
 
 module.exports = router;

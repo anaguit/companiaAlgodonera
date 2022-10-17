@@ -60,6 +60,20 @@ const controladorCliente = {
             //res.send(producto)
             res.render("detalleCliente",{producto})
         })
+    },
+    buscarCategoria:(req,res)=>{
+        db.Producto.findAll({
+            where:{idCategorias:req.query.categoria}
+        }).then((productos)=>{
+                res.render("resultadoCategoria",{productos});
+        });
+    },
+    buscarTamanio:(req,res)=>{
+        db.Producto.findAll({
+            where:{idTamanios:req.query.tamanio}
+        }).then((productos)=>{
+            res.render("resultadoTamanio",{productos});
+        });
     }
 };
 

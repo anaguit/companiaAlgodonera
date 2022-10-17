@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../parciales/head") %>
+<body>
+    <%- include("../parciales/header") %>
+    <main>
+        <h2>Productos de la categoria</h2>
+        <% for(let producto of productos){ %>
+            <div>
+                <a href="/producto/<%= producto.codigo %>"><%= producto.nombre %> <%= producto.modelo %>
+            </div>
+        <% } %>
+    </main>
+    <%- include("../parciales/footer") %>
+</body>
+</html>
