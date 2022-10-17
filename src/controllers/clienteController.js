@@ -3,15 +3,17 @@ const db = require("../database/models");
 
 const controladorCliente = {
     inicio:(req,res)=>{
+        const categorias = db.Categorias.findAll();
+        const tamanios = db.Tamanios.findAll();
         const enDestacados = db.Producto.findAll({
             where:{destacado:"si"}
         });
         const enOfertas = db.Producto.findAll({
             where:{oferta:"si"}
         });
-        Promise.all([enDestacados,enOfertas])
-        .then(([destacados,ofertas])=>{
-            res.render("inicio",{destacados,ofertas});
+        Promise.all([categorias,tamanios,enDestacados,enOfertas])
+        .then(([categorias,tamanios,destacados,ofertas])=>{
+            res.render("inicio",{categorias,tamanios,destacados,ofertas});
         });
     },
     listado:(req,res)=>{

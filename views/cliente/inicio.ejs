@@ -4,6 +4,26 @@
 <body>
     <%- include("../parciales/header") %>
     <main>
+        <h3>Buscador</h3>
+        <form action="/buscar/categoria" method="GET">
+            <select name="categoria">
+                <option>Seleccioná categoría</option>
+            <% for(categoria of categorias){ %>
+                <option value="<%= categoria.id %>"><%= categoria.nombre %></option>
+            <% } %>
+            </select>
+            <button type="submit">Buscar</button>
+        </form>
+        <form action="/buscar/tamanio" method="GET">
+            <select name="tamanio">
+                <option>Seleccioná tamaño</option>
+            <%  for(let tamanio of tamanios){ %>
+                <option value="<%= tamanio.id %>"><%= tamanio.tamanio %></option>
+            <% } %>
+            </select>
+            <button type="submit">Buscar</button>
+        </form>
+
         <h3><a href="productos">Mirá todos nuestros productos</a></h3>
         <h1>Destacados</h1>
         <div class="destacados">
