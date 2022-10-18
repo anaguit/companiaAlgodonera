@@ -16,6 +16,14 @@ const controladorAdmin = {
             });
 
     },
+    detalle:(req,res)=>{
+        db.Producto.findOne({
+            where:{codigo:req.params.id}
+        })
+        .then((producto)=>{
+            res.render("detalle",{producto});
+        });
+    },
     crear:(req,res)=>{
         db.Categorias.findAll()
         .then((categorias)=>{
@@ -42,7 +50,12 @@ const controladorAdmin = {
                 idTamanios:req.body.tamanio,
                 idCategorias:req.body.categoria
             }).then((resultado)=>{
-                res.render("creadoExitoso");
+                db.Producto.findOne({
+                    where:{codigo:req.body.codigo}
+                })
+                .then((productoEncontrado)=>{
+                    res.render("creadoExitoso",{productoEncontrado});
+                })
             })
         }
         else{

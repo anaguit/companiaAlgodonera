@@ -7,7 +7,7 @@
         <h4>Listado de productos</h4>
         <% for(producto of productos){ %>
             <div>
-                <p><%= producto.codigo %> <%= producto.nombre %> <%= producto.modelo %></p>
+                <a href="/admin/detalle/<%= producto.codigo %>"><%= producto.nombre %> <%= producto.modelo %></a>
             </div>
         <% } %>
     </main>

@@ -35,4 +35,5 @@ router.delete("/mensaje/:id",autorizado,controladorAdmin.borrarMensaje);
 router.get("/registrar",autorizado,controladorAdmin.registrar);
 router.post("/registrar",autorizado,controladorAdmin.guardarRegistro);
 
+router.get("/detalle/:id",controladorAdmin.detalle);
 module.exports = router;

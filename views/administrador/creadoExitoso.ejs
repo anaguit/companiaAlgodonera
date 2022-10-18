@@ -6,7 +6,7 @@
     <main>
         <h1>Producto creado con éxito</h1>
         <a href="/admin/crear">Cargar nuevo producto</a>
-        <a>Ver detalle del producto</a>
+        <a href="/admin/detalle/<%= productoEncontrado.codigo %>">Ver detalle del producto</a>
         <a href="/admin/panel">Volver al panel</a>
     </main>
     <%- include("../parciales/footer") %>
