@@ -27,9 +27,6 @@
                 <textarea name="descripcion" placeholder="descripcion"><%= locals.data && locals.data.descripcion ? data.descripcion : '' %></textarea>
             </div>
             <div class="inputsCrear">
-                <input type="text" name="precio" placeholder="precio" value="<%= locals.data && locals.data.precio ? data.precio:'' %>">
-            </div>
-            <div class="inputsCrear">
                 <p style="color:red"><%= locals.errores && errores.medidas ? errores.medidas.msg : "" %></p>
                 <input type="text" name="medidas" placeholder="medidas" value="<%= locals.data && locals.data.medidas ? data.medidas:'' %>">
             </div>
