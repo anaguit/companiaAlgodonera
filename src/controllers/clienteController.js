@@ -65,14 +65,24 @@ const controladorCliente = {
         db.Producto.findAll({
             where:{idCategorias:req.query.categoria}
         }).then((productos)=>{
+            if(productos.length != 0){
                 res.render("resultadoCategoria",{productos});
+            }
+            else{
+                res.render("noEncontradoCliente")
+            }
         });
     },
     buscarTamanio:(req,res)=>{
         db.Producto.findAll({
             where:{idTamanios:req.query.tamanio}
         }).then((productos)=>{
-            res.render("resultadoTamanio",{productos});
+            if(productos.length != 0){
+                res.render("resultadoTamanio",{productos});
+            }
+            else{
+                res.render("noEncontradoCliente");
+            }
         });
     }
 };
