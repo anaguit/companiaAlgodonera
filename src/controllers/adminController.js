@@ -59,6 +59,8 @@ const controladorAdmin = {
             })
         }
         else{
+            fs.unlinkSync(req.file.path);
+            
             const pedidoCategorias = db.Categorias.findAll();
             const pedidoTamanios = db.Tamanios.findAll();
             Promise.all([pedidoCategorias,pedidoTamanios])
