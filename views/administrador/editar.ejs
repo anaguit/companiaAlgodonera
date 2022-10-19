@@ -7,24 +7,31 @@
         <h3>Editar producto <%= producto.codigo %></h3>
         <form action="/admin/producto/<%= producto.codigo %>?_method=PUT" method="POST" enctype="multipart/form-data">
             <div class="inputsEditar">
+                <p>Código</p>
                 <input type="text" name="codigo" value="<%= producto.codigo %>">
             </div>
             <div class="inputsEditar">
+                <p>Nombre</p>
                 <input type="text" name="nombre" value="<%= producto.nombre %>">
             </div>
             <div class="inputsEditar">
+                <p>Modelo</p>
                 <input type="text" name="modelo" value="<%= producto.modelo %>">
             </div>
             <div class="inputsEditar">
+                <p>Marca</p>
                 <input type="text" name="marca" value="<%= producto.marca %>">
             </div>
             <div class="inputsEditar">
+                <p>Descripción</p>
                 <textarea name="descripcion"><%= producto.descripcion %></textarea>
             </div>
             <div class="inputsEditar">
+                <p>Medidas</p>
                 <input type="text" name="medidas" value="<%= producto.medidas %>">
             </div>
             <div class="inputsEditar">
+                <p>categoria</p>
                 <select name="categoria">
                     <option value="" >Seleccioná opción</option> 
                     <% for(let categoria of categorias) { %> 
@@ -34,6 +41,7 @@
                 </select>
             </div>
             <div class="inputsEditar">
+                <p>Tamaño</p>
                 <select name="tamanio">
                     <option value="">Seleccioná tamaño</option>
                     <% for(let tamanio of tamanios){ %>
