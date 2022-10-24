@@ -7,18 +7,39 @@ li{
     list-style-type: none;
 }
 .logo{
-    width: 10%;
-    height: 10%;
+    width: 5%;
+    height: 5%;
 }
 header{
     position:fixed;
     background-color: #5c5c5c;
     width: 100vw;
-    padding: 1vw;
+    padding: 3vw;
     color: #fff;
 }
 header a{
     color: #fff;
+}
+.textoHeader{
+    display:flex;
+    justify-content: space-between;
+    padding-right: 3vw;
+}
+.mail{
+    font-size: 20px;
+    color:#fff;
+}
+.whatsapp{
+    font-size: 30px;
+    color:green;
+}
+.facebook{
+    font-size: 30px;
+    color:blue;
+}
+.instagram{
+    font-size: 30px;
+    color:violet;
 }
 .banner{
     padding-top: 20%;
@@ -47,4 +68,11 @@ main{
 }
 .productoOferta{
     border:dashed red 1px;
+}
+footer{
+    background-color: #000
+}
+.textoFooter{
+    padding:10vw;
+    color:#fff;  
 }
