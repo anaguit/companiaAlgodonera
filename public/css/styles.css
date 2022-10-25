@@ -9,6 +9,11 @@ li{
 .logo{
     width: 8%;
     height: 8%;
+    margin-left:2%
+}
+.textoLogo{
+    color: #fff;
+    font-size: 12px;
 }
 header{
     position:fixed;
@@ -34,15 +39,15 @@ footer a{
     color:#fff;
 }
 .whatsapp{
-    font-size: 30px;
+    font-size: 20px;
     color:green;
 }
 .facebook{
-    font-size: 30px;
+    font-size: 20px;
     color:blue;
 }
 .instagram{
-    font-size: 30px;
+    font-size: 20px;
     color:violet;
 }
 .banner{
