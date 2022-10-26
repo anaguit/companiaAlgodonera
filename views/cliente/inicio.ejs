@@ -40,27 +40,31 @@
                 </div>
             </div>
         </section>
-        <section class="seccionesInicio">
-            <h1>Destacados</h1>
-            <div class="destacados">
-                <% for(let destacado of destacados){ %>
-                    <div class="productoDestacado">
-                        <a href="/producto/<%= destacado.codigo %>"><%= destacado.nombre %> <%= destacado.modelo %></a>
-                        <img src="<%= destacado.foto %>">
-                    </div>
-                <% } %>
-            </div>
-        </section>
-        <section class="seccionesInicio">
-            <h1>Ofertas</h1>
-            <div class="oferta">
-                    <% for(let oferta of ofertas){ %>
-                        <div class="productoOferta">
-                            <a href="/producto/<%= oferta.codigo %>"><%= oferta.nombre %> <%= oferta.modelo %></a>
-                            <img src="<%= oferta.foto %>"> 
+        <section class="seccionesMain">
+            <article class="seccionesInicio">
+                <h1>Destacados</h1>
+                <div class="destacados">
+                    <% for(let destacado of destacados){ %>
+                        <div class="productoDestacado">
+                            <a href="/producto/<%= destacado.codigo %>"><%= destacado.nombre %> <%= destacado.modelo %></a>
+                            <!-- <img src="<%= destacado.foto %>"> -->
+                            <img src="/archivos/fundaedredonBoston.JPG" class="imagenPrueba">
                         </div>
                     <% } %>
-            </div>
+                </div>
+            </article>
+            <article class="seccionesInicio">
+                <h1>Ofertas</h1>
+                <div class="oferta">
+                        <% for(let oferta of ofertas){ %>
+                            <div class="productoOferta">
+                                <a href="/producto/<%= oferta.codigo %>"><%= oferta.nombre %> <%= oferta.modelo %></a>
+                                <!-- <img src="<%= oferta.foto %>"> -->
+                                <img src="/archivos/IMG_0256.JPG" class="imagenPrueba"> 
+                            </div>
+                        <% } %>
+                </div>
+            </article>
         </section>
     </main>
     <%- include("../parciales/footer") %>
