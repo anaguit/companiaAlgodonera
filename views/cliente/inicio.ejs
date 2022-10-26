@@ -12,28 +12,34 @@
         </div>
     </div>
     <main class="mainHome">
-        <div class="buscador">
-            <h3>Buscador</h3>
-            <form action="/buscar/categoria" method="GET">
-                <select name="categoria">
-                    <option value="8">Seleccioná categoría</option>
-                <% for(categoria of categorias){ %>
-                    <option value="<%= categoria.id %>"><%= categoria.nombre %></option>
-                <% } %>
-                </select>
-                <button type="submit">Buscar</button>
-            </form>
-            <form action="/buscar/tamanio" method="GET">
-                <select name="tamanio">
-                    <option>Seleccioná tamaño</option>
-                <%  for(let tamanio of tamanios){ %>
-                    <option value="<%= tamanio.id %>"><%= tamanio.tamanio %></option>
-                <% } %>
-                </select>
-                <button type="submit">Buscar</button>
-            </form>
-        </div>
-        <h3><a href="productos">Mirá todos nuestros productos</a></h3>
+        <section class="mainSuperior">
+            <h3><a href="productos">Mirá todos nuestros productos</a></h3>
+            <div class="buscador">
+                <h3>Buscar</h3>
+                <div class="filtro">
+                    <form action="/buscar/categoria" method="GET">
+                        <select name="categoria" class="selectFiltro">
+                            <option value="8">Seleccioná categoría</option>
+                        <% for(categoria of categorias){ %>
+                            <option value="<%= categoria.id %>"><%= categoria.nombre %></option>
+                        <% } %>
+                        </select>
+                        <button type="submit">Ir</button>
+                    </form>
+                </div>
+                <div class="filtro">
+                    <form action="/buscar/tamanio" method="GET">
+                        <select name="tamanio" class="selectFiltro">
+                            <option>Seleccioná tamaño</option>
+                        <%  for(let tamanio of tamanios){ %>
+                            <option value="<%= tamanio.id %>"><%= tamanio.tamanio %></option>
+                        <% } %>
+                        </select>
+                        <button type="submit">Ir</button>
+                    </form>
+                </div>
+            </div>
+        </section>
         <section class="seccionesInicio">
             <h1>Destacados</h1>
             <div class="destacados">
