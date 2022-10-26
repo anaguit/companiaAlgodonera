@@ -60,6 +60,8 @@ header{
     color:violet;
 }
 
+/* HOME */
+
 .banner{
     padding-top: 40%;
     width: 100vw;
@@ -72,6 +74,12 @@ header{
     top:-20vh;
     margin: 0% 20% 0% 20%;
     border:#fff solid 3px
+}
+.mainHome{
+    width: 100vw;
+    background-color: #eee;
+    padding: 20px;
+    padding-top: 5%;
 }
 main{
     width: 100vw;
