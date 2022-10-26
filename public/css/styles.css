@@ -6,33 +6,42 @@
 li{
     list-style-type: none;
 }
+
+/* Header */
+header a{
+    color: #fff;
+}
+header{
+    position:fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #5c5c5c;
+    width: 100vw;
+    padding: 2vw;
+    color: #fff;
+    z-index: 1;
+}
+.contenedorLogo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .logo{
-    width: 8%;
-    height: 8%;
-    margin-left:2%
+    width: 60px;
+    height: 60px;
+    margin-left:2%;
+    
 }
 .textoLogo{
     color: #fff;
     font-size: 12px;
 }
-header{
-    position:fixed;
-    background-color: #5c5c5c;
-    width: 100vw;
-    padding: 3vw;
-    color: #fff;
-    z-index: 1;
-}
-header a{
-    color: #fff;
-}
-footer a{
-    color: red;
-}
 .textoHeader{
-    display:flex;
-    justify-content: space-between;
-    padding-right: 3vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 2vw;
 }
 .mail{
     font-size: 20px;
@@ -50,6 +59,7 @@ footer a{
     font-size: 20px;
     color:violet;
 }
+
 .banner{
     padding-top: 40%;
     width: 100vw;
@@ -88,6 +98,9 @@ main{
 .productoOferta{
     border:dashed red 1px;
 }
+
+/* FOOTER*/
+
 footer{
     width: 100vw;
     background-color: #000
@@ -95,4 +108,7 @@ footer{
 .textoFooter{
     padding:10vw;
     color:#fff;  
+}
+footer a{
+    color: red;
 }
