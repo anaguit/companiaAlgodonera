@@ -4,28 +4,28 @@
 <body>
     <%- include("../parciales/header") %>
 
-    <main>
+    <main class="formularioContacto">
         <h1>Dejanos tu mensaje</h1>
         <form action="/contacto" method="POST">
-            <div class="inputsContacto">
+            <div class="camposContacto">
                 <p style="color:red"><%= locals.errores && errores.nombre ? errores.nombre.msg : "" %></p>
-                <input type="text" name="nombre" placeholder="nombre" value="<%= locals.data && data.nombre ? data.nombre : '' %>">
+                <input type="text" name="nombre" placeholder="nombre" value="<%= locals.data && data.nombre ? data.nombre : '' %>" class="inputsFormulario">
             </div>
-            <div class="inputsContacto">
+            <div class="camposContacto">
                 <p style="color:red"><%= locals.errores && errores.mail ? errores.mail.msg : "" %></p>
-                <input type="text" name="mail" placeholder="mail" value="<%= locals.data && data.mail ? data.mail : '' %>">
+                <input type="text" name="mail" placeholder="mail" value="<%= locals.data && data.mail ? data.mail : '' %>" class="inputsFormulario">
             </div>
-            <div class="inputsContacto">
+            <div class="camposContacto">
                 <p style="color:red"><%= locals.errores && errores.asunto ? errores.asunto.msg : "" %></p>
-                <input type="text" name="asunto" placeholder="asunto" value="<%= locals.data && data.asunto ? data.asunto : '' %>">
+                <input type="text" name="asunto" placeholder="asunto" value="<%= locals.data && data.asunto ? data.asunto : '' %>" class="inputsFormulario">
             </div>
-            <div class="inputsContacto">
+            <div class="camposContacto">
                 <p style="color:red"><%= locals.errores && errores.mensaje ? errores.mensaje.msg : "" %></p>
-                <textarea name="mensaje" placeholder="dejanos tu mensaje"><%= locals.data && data.mensaje ? data.mensaje : '' %></textarea>
+                <textarea name="mensaje" placeholder="dejanos tu mensaje" class="inputsFormulario"><%= locals.data && data.mensaje ? data.mensaje : '' %></textarea>
             </div>
             <div class="botonesContacto">
-                <button type="submit">Enviar</button>
-                <button type="reset">Cancelar</button>
+                <button type="submit" class="botonContacto">Enviar</button>
+                <button type="reset" class="botonContacto">Cancelar</button>
             </div>
         </form>
     </main>
