@@ -4,30 +4,45 @@
 <body>
     <%- include("../parciales/header") %>
     <main>
-        <div class="categorias">
-            <h3>Sábanas</h3>
-            <ul>
-            <% for(let sabana of sabanas){ %>
-                <li><a href="/producto/<%= sabana.codigo %>"><%= sabana.nombre %> <%= sabana.modelo %></a></li>
-            <% } %>
-            </ul>
-        </div>
-        <div class="categorias">
-            <h3>Fundas</h3>
-            <ul>
-            <% for(let funda of fundas){ %>
-                <li><a href="/producto/<%= funda.codigo %>"><%= funda.nombre %> <%= funda.modelo %><a></li> 
-            <% } %>
-            </ul>
-        </div>
-        <div class="categorias">
-            <h3>acolchados</h3>
-            <ul>
-            <% for(let acolchado of acolchados){ %>
-                <li><a href="/producto/<%= acolchado.codigo %>"><%= acolchado.nombre %> <%= acolchado.modelo %></a></li> 
-            <% } %>
-            </ul>
-        </div>
+        <section class="categorias">
+            <h3 class="tituloCategoria">Sábanas</h3>
+            <div class="listadoProductos">
+                <% for(let sabana of sabanas){ %>
+                    <div class="articuloListado">
+                        <p><a href="/producto/<%= sabana.codigo %>"><%= sabana.nombre %> <%= sabana.modelo %></a></p>
+                        <div class="imagenArticulo">
+                            <img src="/archivos/fundaedredonBoston.JPG" width="80px">
+                        </div>   
+                    </div>
+                <% } %>
+            </div>
+        </section>
+        <section class="categorias">
+            <h3 class="tituloCategoria">Fundas</h3>
+            <div class="listadoProductos">
+                <% for(let funda of fundas){ %>
+                    <div class="articuloListado">
+                        <p><a href="/producto/<%= funda.codigo %>"><%= funda.nombre %> <%= funda.modelo %><a></p>
+                        <div class="imagenArticulo">    
+                            <img src="/archivos/fundaedredonBoston.JPG" width="80px">
+                        </div>
+                    </div>
+                <% } %>
+            </div>
+        </section>
+        <section class="categorias">
+            <h3 class="tituloCategoria">acolchados</h3>
+            <div class="listadoProductos">
+                <% for(let acolchado of acolchados){ %>
+                    <div class="articuloListado">
+                        <p><a href="/producto/<%= acolchado.codigo %>"><%= acolchado.nombre %> <%= acolchado.modelo %></a></p>
+                        <div class="imagenArticulo">
+                            <img src="/archivos/fundaedredonBoston.JPG" width="80px">
+                        </div>
+                    </div>
+                <% } %>
+            </div>
+        </section>
     </main>
     <%- include("../parciales/footer") %>
 </body>

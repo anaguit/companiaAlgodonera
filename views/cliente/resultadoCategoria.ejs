@@ -5,11 +5,16 @@
     <%- include("../parciales/header") %>
     <main>
         <h2>Productos de la categoria</h2>
-        <% for(let producto of productos){ %>
-            <div>
-                <a href="/producto/<%= producto.codigo %>"><%= producto.nombre %> <%= producto.modelo %>
-            </div>
-        <% } %>
+        <div class="listadoProductos">
+            <% for(let producto of productos){ %>
+                <div class="articuloListado">
+                    <a href="/producto/<%= producto.codigo %>"><%= producto.nombre %> <%= producto.modelo %></a>
+                    <div class="imagenArticulo">
+                        <img src="/archivos/fundaedredonBoston.JPG" width="80px">
+                    </div>
+                </div>
+            <% } %>
+        </div>
     </main>
     <%- include("../parciales/footer") %>
 </body>
