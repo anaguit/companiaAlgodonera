@@ -8,7 +8,7 @@
         <div class="listadoProductos">
             <% for(let producto of productos){ %>
                 <div class="articuloListado">
-                    <a href="/producto/<%= producto.codigo %>"><%= producto.nombre %> <%= producto.modelo %></a>
+                    <p><a href="/producto/<%= producto.codigo %>"><%= producto.nombre %> <%= producto.modelo %></a></p>
                     <div class="imagenArticulo">    
                         <img src="/archivos/fundaedredonBoston.JPG" width="80px">
                     </div>
