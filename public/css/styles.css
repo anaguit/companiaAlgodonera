@@ -138,11 +138,21 @@ main{
 
 /*CONTACTANOS*/
 .formularioContacto{
+    width: 100vw;
+    background-image: url("../archivos/fundaedredonBoston.jpg");
+    background-size:cover;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-bottom: 10%;
-}
+ }
+ .formulario{
+     background-color: #b65d21;
+     box-shadow: 5px 5px rgb(63, 62, 62);
+     opacity: 0.9;
+     padding: 5%;
+     border-radius: 20px;
+ }
 .camposContacto{
     display: flex;
     flex-direction: column;
@@ -182,20 +192,6 @@ main{
     border: solid 3px green;
 }
 
-/* CONTACTANOS */
-
-.formularioContacto{
-   width: 100vw;
-   background-image: url("../archivos/fundaedredonBoston.jpg");
-   background-size:cover;
-}
-.formulario{
-    background-color: #b65d21;
-    box-shadow: 5px 5px rgb(63, 62, 62);
-    opacity: 0.9;
-    padding: 5%;
-    border-radius: 20px;
-}
 
 /*.verListado{
     color: #000;
@@ -217,4 +213,29 @@ footer{
 }
 footer a{
     color: red;
+}
+
+/* ---- ADMIN ------ */
+
+.formularioLogin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10%;
+}
+.camposLogin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;  
+}
+.inputsLogin{
+    width: 20vw;
+}
+.botonesLogin{
+    padding-top: 10%;
+    text-align: center;
+}
+.botonLogin{
+    width:7vw
 }

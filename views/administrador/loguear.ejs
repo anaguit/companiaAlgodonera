@@ -3,16 +3,22 @@
 <%- include("../parciales/head") %>
 <body>
     <%- include("../parciales/header") %>
-    <main>
-        <h2>Ingresa</h2>
-        <form action="/admin" method="POST">
+    <main class="formularioLogin">
+        <h2>Ingresá</h2>
+        <form action="/admin" method="POST" class="login">
             <p style="color:red"><%= locals.error ? error:"" %></p>
-            <p>Email</p>
-            <input type="text" name="email">
-            <p>Contraseña</p>
-            <input type="password" name="contrasenia">
-            <button type="submit">Enviar</button>
-            <button type="reset">Cancelar</button>
+            <div class="camposLogin">
+                <p>Email</p>
+                <input type="text" name="email" class="inputsLogin">
+            </div>
+            <div class="camposLogin">
+                <p>Contraseña</p>
+                <input type="password" name="contrasenia" class="inputsLogin">
+            </div>
+            <div class="botonesLogin">
+                <button type="submit" class="botonLogin">Enviar</button>
+                <button type="reset" class="botonLogin">Cancelar</button>
+            </div>
         </form>
     </main>
     <%- include("../parciales/footer") %>
