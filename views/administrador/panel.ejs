@@ -3,11 +3,13 @@
 <%- include("../parciales/head") %>
 <body>
     <%- include("../parciales/headerAdmin") %>
-    <main>
-        <h3>Los links de operaciones</h3>
-        <a href="/admin/productos">Ver listado de productos</a>
-        <a href="/admin/mensajes">Mensajes de clientes</a>
-        <a href="/admin/crear">Cargar producto</a>
+    <main class="panel">
+        <h2>Menú</h2>
+        <div class="linksPanel">
+            <a href="/admin/productos" class="links">Ver listado de productos</a>
+            <a href="/admin/mensajes" class="links">Mensajes de clientes</a>
+            <a href="/admin/crear" class="links">Cargar producto</a>
+        </div>
     </main>
     <%- include("../parciales/footer") %>
 </body>

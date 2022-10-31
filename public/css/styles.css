@@ -239,3 +239,48 @@ footer a{
 .botonLogin{
     width:7vw
 }
+
+/* --- PANEL --- */
+
+.panel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.linksPanel{
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    
+}
+.links{
+    text-align: center;
+    padding: 10px;
+    color: #000;
+    background-color: #f5826e;
+    margin-bottom:  10px;
+}
+
+/* --- FORMULARIOS ADMIN --- */
+.formularioProducto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #179c86;
+    border-radius: 10px;
+    margin: 0vw 25vw;
+    padding-bottom: 2%;
+}
+.inputsProducto{
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    padding-top: 10px;
+}
+.botonesProducto{
+    padding-top: 10%;
+    text-align: center;
+}
+.botonProducto{
+    width:10vw
+}
