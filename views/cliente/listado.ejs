@@ -11,7 +11,7 @@
                     <div class="articuloListado">
                         <p><a href="/producto/<%= sabana.codigo %>"><%= sabana.nombre %> <%= sabana.modelo %></a></p>
                         <div class="imagenArticulo">
-                            <img src="/archivos/fundaedredonBoston.JPG" width="80px">
+                            <img src="/imagenes/<%= sabana.foto %>" width="100px">
                         </div>   
                     </div>
                 <% } %>
@@ -24,7 +24,7 @@
                     <div class="articuloListado">
                         <p><a href="/producto/<%= funda.codigo %>"><%= funda.nombre %> <%= funda.modelo %><a></p>
                         <div class="imagenArticulo">    
-                            <img src="/archivos/fundaedredonBoston.JPG" width="80px">
+                            <img src="/imagenes/<%= funda.foto %>" width="100px">
                         </div>
                     </div>
                 <% } %>
@@ -37,7 +37,7 @@
                     <div class="articuloListado">
                         <p><a href="/producto/<%= acolchado.codigo %>"><%= acolchado.nombre %> <%= acolchado.modelo %></a></p>
                         <div class="imagenArticulo">
-                            <img src="/archivos/fundaedredonBoston.JPG" width="80px">
+                            <img src="/imagenes/<%= acolchado.foto %>" width="100px">
                         </div>
                     </div>
                 <% } %>
