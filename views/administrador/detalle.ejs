@@ -14,7 +14,7 @@
         <p>Codigo: <%= producto.codigo %></p>
         <p>Destacado: <%= producto.destacado %></p>
         <p>En oferta: <%= producto.oferta %></p>
-        <p>Foto: <%= producto.foto %></p>
+        <img src="/imagenes/<%= producto.foto %>" width="100px">
         <button><a href="/admin/producto/<%= producto.codigo %>">Editar</a></button>
         <form action="/admin/producto/<%= producto.codigo %>?_method=DELETE" method="POST">
             <button type="submit">Borrar</button>
