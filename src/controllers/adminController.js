@@ -34,7 +34,52 @@ const controladorAdmin = {
         });
     },
     guardarCreado:(req,res)=>{
-        const errores = validationResult(req);
+        db.Producto.findOne({
+            where:{codigo:req.body.codigo}
+        }).then((productoExistente)=>{
+            if(productoExistente == undefined){
+                const errores = validationResult(req);
+                if(errores.isEmpty()){
+                    db.Producto.create({
+                        nombre:req.body.nombre,
+                        modelo:req.body.modelo,
+                        marca:req.body.marca,
+                        descripcion:req.body.descripcion,
+                        precio:req.body.precio,
+                        foto:req.file.path,
+                        destacado:req.body.destacado,
+                        oferta:req.body.oferta,
+                        codigo:req.body.codigo,
+                        medidas:req.body.medidas,
+                        idTamanios:req.body.tamanio,
+                        idCategorias:req.body.categoria
+                    }).then((resultado)=>{
+                        db.Producto.findOne({
+                            where:{codigo:req.body.codigo}
+                        })
+                        .then((productoEncontrado)=>{
+                            res.render("creadoExitoso",{productoEncontrado});
+                        })
+                    })
+                }
+                else{
+                    fs.unlinkSync(req.file.path);
+                    
+                    const pedidoCategorias = db.Categorias.findAll();
+                    const pedidoTamanios = db.Tamanios.findAll();
+                    Promise.all([pedidoCategorias,pedidoTamanios])
+                        .then(([categorias,tamanios])=>{
+                            //res.send(errores.mapped())
+                            console.log(req.body)
+                            res.render("crear",{errores:errores.mapped(),categorias,tamanios,data:req.body});
+                        });
+                };
+            }
+            else{
+                res.render("productoExistente")
+            };
+        });
+        /*const errores = validationResult(req);
         if(errores.isEmpty()){
             db.Producto.create({
                 nombre:req.body.nombre,
@@ -69,7 +114,7 @@ const controladorAdmin = {
                     console.log(req.body)
                     res.render("crear",{errores:errores.mapped(),categorias,tamanios,data:req.body});
                 });
-        };
+        };*/
     },
     editar:(req,res)=>{
         const pedidoCategorias = db.Categorias.findAll();
