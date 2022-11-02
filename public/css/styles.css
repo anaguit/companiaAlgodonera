@@ -111,18 +111,6 @@ header{
 .seccionesInicio{
     text-align: center;
 }
-/*.listadoInicio{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    border:solid green 2px;
-}
-.articuloInicio{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border:dashed red 1px;
-}*/
 main{
     width: 100vw;
     background-color: #eee;
@@ -184,7 +172,8 @@ main{
     flex-direction: column;
     align-items: center;
     padding:10px;
-    border:solid 3px black;
+    background-color: #fff;
+    /*border:solid 3px black;*/
     transition: all 450ms;
 }
 .articuloListado:hover{
@@ -200,7 +189,8 @@ main{
     max-width: 100%;
     height: 100%;
     overflow: hidden;
-    border: solid 3px green;
+
+    /*border: solid 3px green;*/
 }
 .imagen{
     max-width: 100%;
@@ -221,6 +211,24 @@ main{
     background-color: #5c5c5c;
     border-radius: 5px;
 }*/
+
+/* --- DETALLE CLIENTE --- */
+.tituloDetalle{
+    text-align: center;
+}
+.cuerpoDetalle{
+    display: flex;
+    justify-content: space-between;
+}
+.contenedorImagenDetalle{
+    margin-right: 2%;
+    max-width: 40%;
+}
+.imagenDetalle{
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 /* FOOTER*/
 
 footer{

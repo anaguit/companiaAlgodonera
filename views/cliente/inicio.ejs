@@ -46,7 +46,7 @@
                 <div class="listadoProductos">
                     <% for(let destacado of destacados){ %>
                         <div class="articuloListado">
-                            <a href="/producto/<%= destacado.codigo %>"><%= destacado.nombre %> <%= destacado.modelo %></a>
+                            <p><a href="/producto/<%= destacado.codigo %>"><%= destacado.nombre %> <%= destacado.modelo %></a></p>
                             <div class="imagenArticulo">
                                 <img src="/imagenes/<%= destacado.foto %>" class="imagen">
                             </div>
@@ -59,7 +59,7 @@
                 <div class="listadoProductos">
                         <% for(let oferta of ofertas){ %>
                             <div class="articuloListado">
-                                <a href="/producto/<%= oferta.codigo %>"><%= oferta.nombre %> <%= oferta.modelo %></a>
+                            <p><a href="/producto/<%= oferta.codigo %>"><%= oferta.nombre %> <%= oferta.modelo %></a></p>
                                 <div class="imagenArticulo">
                                     <img src="/imagenes/<%= oferta.foto %>" class="imagen">
                                 </div>
