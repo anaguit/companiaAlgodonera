@@ -43,22 +43,26 @@
         <section class="seccionesMain">
             <article class="seccionesInicio">
                 <h1>Destacados</h1>
-                <div class="destacados">
+                <div class="listadoProductos">
                     <% for(let destacado of destacados){ %>
-                        <div class="productoDestacado">
+                        <div class="articuloListado">
                             <a href="/producto/<%= destacado.codigo %>"><%= destacado.nombre %> <%= destacado.modelo %></a>
-                            <img src="/imagenes/<%= destacado.foto %>" width="100px">
+                            <div class="imagenArticulo">
+                                <img src="/imagenes/<%= destacado.foto %>" class="imagen">
+                            </div>
                         </div>
                     <% } %>
                 </div>
             </article>
             <article class="seccionesInicio">
                 <h1>Ofertas</h1>
-                <div class="oferta">
+                <div class="listadoProductos">
                         <% for(let oferta of ofertas){ %>
-                            <div class="productoOferta">
+                            <div class="articuloListado">
                                 <a href="/producto/<%= oferta.codigo %>"><%= oferta.nombre %> <%= oferta.modelo %></a>
-                                <img src="/imagenes/<%= oferta.foto %>" width="100px">
+                                <div class="imagenArticulo">
+                                    <img src="/imagenes/<%= oferta.foto %>" class="imagen">
+                                </div>
                             </div>
                         <% } %>
                 </div>

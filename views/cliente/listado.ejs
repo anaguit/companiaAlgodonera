@@ -11,8 +11,11 @@
                     <div class="articuloListado">
                         <p><a href="/producto/<%= sabana.codigo %>"><%= sabana.nombre %> <%= sabana.modelo %></a></p>
                         <div class="imagenArticulo">
-                            <img src="/imagenes/<%= sabana.foto %>" width="100px">
-                        </div>   
+                            <img src="/imagenes/<%= sabana.foto %>" class="imagen">
+                        </div> 
+                        <div class="descripcionArticulo">
+                            <p><%= sabana.descripcion %></p>
+                        </div>  
                     </div>
                 <% } %>
             </div>
@@ -22,9 +25,12 @@
             <div class="listadoProductos">
                 <% for(let funda of fundas){ %>
                     <div class="articuloListado">
-                        <p><a href="/producto/<%= funda.codigo %>"><%= funda.nombre %> <%= funda.modelo %><a></p>
-                        <div class="imagenArticulo">    
-                            <img src="/imagenes/<%= funda.foto %>" width="100px">
+                        <p><a href="/producto/<%= funda.codigo %>"><%= funda.nombre %> <%= funda.modelo %></a></p>
+                        <div class="imagenArticulo">
+                            <img src="/imagenes/<%= funda.foto %>" class="imagen">
+                        </div>
+                        <div class="descripcionArticulo">
+                            <p><%= funda.descripcion %></p>
                         </div>
                     </div>
                 <% } %>
@@ -37,7 +43,10 @@
                     <div class="articuloListado">
                         <p><a href="/producto/<%= acolchado.codigo %>"><%= acolchado.nombre %> <%= acolchado.modelo %></a></p>
                         <div class="imagenArticulo">
-                            <img src="/imagenes/<%= acolchado.foto %>" width="100px">
+                            <img src="/imagenes/<%= acolchado.foto %>" class="imagen">
+                        </div>
+                        <div class="descripcionArticulo">
+                            <p><%= acolchado.descripcion %></p>
                         </div>
                     </div>
                 <% } %>

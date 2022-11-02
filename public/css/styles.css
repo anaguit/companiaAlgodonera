@@ -111,30 +111,18 @@ header{
 .seccionesInicio{
     text-align: center;
 }
-.destacados{
+/*.listadoInicio{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     border:solid green 2px;
 }
-.productoDestacado{
+.articuloInicio{
     display: flex;
     flex-direction: column;
     align-items: center;
     border:dashed red 1px;
-}
-.oferta{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    border:solid green 2px;
-}
-.productoOferta{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border:dashed red 1px;
-}
+}*/
 main{
     width: 100vw;
     background-color: #eee;
@@ -177,6 +165,10 @@ main{
 }
 
 /* LISTADO PRODUCTOS */
+.categorias{
+    padding-bottom:5%;
+    border-top: 4px solid #000 ;
+}
 .tituloCategoria{
     text-align: center;
 }
@@ -184,19 +176,41 @@ main{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    border: solid 3px red;
+    /*border: solid 3px red;*/
 }
 .articuloListado{
+    width: 20%;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding:10px;
-    border:solid 3px blue;
+    border:solid 3px black;
+    transition: all 450ms;
+}
+.articuloListado:hover{
+    box-shadow: 5px 5px 5px rgb(63, 62, 62);
+}
+.descripcionArticulo{
+    display: none;
+}
+.articuloListado:hover .descripcionArticulo{
+    display: block;
 }
 .imagenArticulo{
-    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    overflow: hidden;
     border: solid 3px green;
 }
+.imagen{
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.descripcionArticulo{
+    display: none;
+}
+
 
 
 /*.verListado{
