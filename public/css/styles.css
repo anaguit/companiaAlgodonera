@@ -249,8 +249,14 @@ footer{
     padding:10vw;
     color:#fff;  
 }
+.linkCompra{
+    font-size: 0.60em;
+}
 footer a{
     color: red;
+}
+.descripcionFooter{
+    font-size: 0.60em;
 }
 
 /* ---- ADMIN ------ */
@@ -321,4 +327,105 @@ footer a{
 }
 .botonProducto{
     width:10vw
+}
+
+@media only screen and (min-width:480px) {
+
+    /* Header */
+    .logo{
+        width: 3em;
+        height: 3em;
+        margin-left:2%;
+        
+    }
+    .linkContacto{
+        font-size: 0.90em;
+    }
+    .mail{
+        font-size: 0.90em;
+        color:#fff;
+    }
+    .whatsapp{
+        font-size: 1.2em;
+    }
+    .facebook{
+        font-size: 1.2em;
+    }
+    .instagram{
+        font-size: 1.2em;
+    }
+
+    /* FOOTER*/
+    .linkCompra{
+        font-size: 1em;
+    }
+    .descripcionFooter{
+        font-size: 0.80em;
+    }
+
+    /*CONTACTANOS*/
+    .tituloFormulario{
+        font-size: 1em;
+    }
+    .errorFormulario{
+        font-size: 0.90em;
+    }
+    .inputsFormulario{
+        font-size: 0.90em;
+        width: 90%;
+    }
+    .botonContacto{
+        font-size: 0.90em;
+        width:40%
+    }
+}
+
+@media only screen and (min-width:768px){
+    /* Header */
+    .logo{
+        width: 4em;
+        height: 4em;
+        margin-left:2%;
+        
+    }
+    .linkContacto{
+        font-size: 0.90em;
+    }
+    .mail{
+        font-size: 0.90em;
+        color:#fff;
+    }
+    .whatsapp{
+        font-size: 1.2em;
+    }
+    .facebook{
+        font-size: 1.2em;
+    }
+    .instagram{
+        font-size: 1.2em;
+    }
+
+    /* FOOTER*/
+    .linkCompra{
+        font-size: 1.5em;
+    }
+    .descripcionFooter{
+        font-size: 1em;
+    }
+
+    /*CONTACTANOS*/
+    .tituloFormulario{
+        font-size: 1.5em;
+    }
+    .errorFormulario{
+        font-size: 0.90em;
+    }
+    .inputsFormulario{
+        font-size: 0.90em;
+        width: 90%;
+    }
+    .botonContacto{
+        font-size: 0.90em;
+        width:40%
+    }
 }
