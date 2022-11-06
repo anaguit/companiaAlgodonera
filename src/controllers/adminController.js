@@ -18,7 +18,8 @@ const controladorAdmin = {
     },
     detalle:(req,res)=>{
         db.Producto.findOne({
-            where:{codigo:req.params.id}
+            where:{codigo:req.params.id},
+            include:[{association:"productoCategoria"}]
         })
         .then((producto)=>{
             res.render("detalle",{producto});
@@ -144,7 +145,8 @@ const controladorAdmin = {
     },
     buscar:(req,res)=>{
         db.Producto.findOne({
-            where:{codigo:req.query.codigo}
+            where:{codigo:req.query.codigo},
+            include:[{association:"productoCategoria"},{association:'productoTamanio'}]
         }).then((producto)=>{
             if(producto != null){
                 res.render("detalle",{producto})

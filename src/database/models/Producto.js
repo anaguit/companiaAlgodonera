@@ -59,7 +59,7 @@ function productoData(sequelize,Datatypes){
 
     Producto.associate = function(modelos){
         Producto.belongsTo(modelos.Tamanios,{
-            as:"productoTamanio",
+            as:'productoTamanio',
             foreignKey:"idTamanios"
         });
     };

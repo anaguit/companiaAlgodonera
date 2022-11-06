@@ -24,10 +24,10 @@ function TamaniosData(sequelize,Datatypes){
 
     Tamanios.associate = function(modelos){
         Tamanios.hasMany(modelos.Producto,{
-            as:"tamanioProducto",
+            as:'tamanioProducto',
             foreignKey:"idTamanios"
-        })
-    }
+        });
+    };
 
     return Tamanios;
 };
