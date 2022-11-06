@@ -9,19 +9,19 @@
             <h3 class="tituloFormulario">Dejanos tu mensaje</h3>
             <form action="/contacto" method="POST">
                 <div class="camposContacto">
-                    <p style="color:red"><%= locals.errores && errores.nombre ? errores.nombre.msg : "" %></p>
+                    <p class="errorFormulario"><%= locals.errores && errores.nombre ? errores.nombre.msg : "" %></p>
                     <input type="text" name="nombre" placeholder="nombre" value="<%= locals.data && data.nombre ? data.nombre : '' %>" class="inputsFormulario">
                 </div>
                 <div class="camposContacto">
-                    <p style="color:red"><%= locals.errores && errores.mail ? errores.mail.msg : "" %></p>
+                    <p class="errorFormulario"><%= locals.errores && errores.mail ? errores.mail.msg : "" %></p>
                     <input type="text" name="mail" placeholder="mail o teléfono" value="<%= locals.data && data.mail ? data.mail : '' %>" class="inputsFormulario">
                 </div>
                 <div class="camposContacto">
-                    <p style="color:red"><%= locals.errores && errores.asunto ? errores.asunto.msg : "" %></p>
+                    <p class="errorFormulario"><%= locals.errores && errores.asunto ? errores.asunto.msg : "" %></p>
                     <input type="text" name="asunto" placeholder="asunto" value="<%= locals.data && data.asunto ? data.asunto : '' %>" class="inputsFormulario">
                 </div>
                 <div class="camposContacto">
-                    <p style="color:red"><%= locals.errores && errores.mensaje ? errores.mensaje.msg : "" %></p>
+                    <p class="errorFormulario"><%= locals.errores && errores.mensaje ? errores.mensaje.msg : "" %></p>
                     <textarea name="mensaje" placeholder="dejanos tu mensaje" class="inputsFormulario"><%= locals.data && data.mensaje ? data.mensaje : '' %></textarea>
                 </div>
                 <div class="botonesContacto">

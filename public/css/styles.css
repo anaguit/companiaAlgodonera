@@ -28,8 +28,8 @@ header{
     align-items: center;
 }
 .logo{
-    width: 3em;
-    height: 3em;
+    width: 2.5em;
+    height: 2.5em;
     margin-left:2%;
     
 }
@@ -118,7 +118,8 @@ main{
 
 /*CONTACTANOS*/
 .tituloFormulario{
-    font-size: 1rem;
+    text-align: center;
+    font-size: 0.75rem;
 }
 .formularioContacto{
     width: 100vw;
@@ -128,14 +129,15 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 25%;
     padding-bottom: 10%;
  }
  .formulario{
-     background-color: #8FBC8F;
-     box-shadow: 5px 5px 5px rgb(63, 62, 62);
-     opacity: 0.9;
-     padding: 5%;
-     border-radius: 20px;
+    background-color: #8FBC8F;
+    box-shadow: 5px 5px 5px rgb(63, 62, 62);
+    opacity: 0.9;
+    padding: 5%;
+    border-radius: 1em;
  }
 .camposContacto{
     display: flex;
@@ -143,15 +145,21 @@ main{
     align-items: center;
     justify-content: space-around;  
 }
+.errorFormulario{
+    color:red;
+    font-size: 0.75em;
+}
 .inputsFormulario{
-    width: 30vw;
+    font-size: 0.75em;
+    width: 70%;
 }
 .botonesContacto{
     padding-top: 10%;
     text-align: center;
 }
 .botonContacto{
-    width:10vw
+    font-size: 0.60em;
+    width:35%
 }
 
 /* LISTADO PRODUCTOS */
