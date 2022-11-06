@@ -28,35 +28,33 @@ header{
     align-items: center;
 }
 .logo{
-    width: 100px;
-    height: 100px;
+    width: 3em;
+    height: 3em;
     margin-left:2%;
     
-}
-.textoLogo{
-    color: #fff;
-    font-size: 12px;
 }
 .textoHeader{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding-right: 2vw;
+    align-items:flex-end
+}
+.linkContacto{
+    font-size: 0.75em;
 }
 .mail{
-    font-size: 20px;
+    font-size: 0.75em;
     color:#fff;
 }
 .whatsapp{
-    font-size: 20px;
+    font-size: 1em;
     color:green;
 }
 .facebook{
-    font-size: 20px;
+    font-size: 1em;
     color:blue;
 }
 .instagram{
-    font-size: 20px;
+    font-size: 1em;
     color:violet;
 }
 
@@ -119,6 +117,9 @@ main{
 }
 
 /*CONTACTANOS*/
+.tituloFormulario{
+    font-size: 1rem;
+}
 .formularioContacto{
     width: 100vw;
     background-image: url("../archivos/cama2.jpg");
