@@ -18,9 +18,10 @@ header{
     align-items: center;
     background-color: #5c5c5c;
     width: 100vw;
-    padding: 2vw;
+    padding: 3vw;
     color: #fff;
     z-index: 1;
+    font-size: 1rem;
 }
 .contenedorLogo{
     display: flex;
@@ -28,10 +29,9 @@ header{
     align-items: center;
 }
 .logo{
-    width: 2.5em;
-    height: 2.5em;
+    width: 3em;
+    height: 3em;
     margin-left:2%;
-    
 }
 .textoHeader{
     display: flex;
@@ -39,22 +39,22 @@ header{
     align-items:flex-end
 }
 .linkContacto{
-    font-size: 0.75em;
+    font-size: 0.85em;
 }
 .mail{
-    font-size: 0.75em;
+    font-size: 0.85em;
     color:#fff;
 }
 .whatsapp{
-    font-size: 1em;
+    font-size: 1.3em;
     color:green;
 }
 .facebook{
-    font-size: 1em;
+    font-size: 1.3em;
     color:blue;
 }
 .instagram{
-    font-size: 1em;
+    font-size: 1.3em;
     color:violet;
 }
 
@@ -117,10 +117,6 @@ main{
 }
 
 /*CONTACTANOS*/
-.tituloFormulario{
-    text-align: center;
-    font-size: 0.75rem;
-}
 .formularioContacto{
     width: 100vw;
     background-image: url("../archivos/cama2.jpg");
@@ -129,7 +125,7 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 25%;
+    padding-top: 30%;
     padding-bottom: 10%;
  }
  .formulario{
@@ -137,8 +133,13 @@ main{
     box-shadow: 5px 5px 5px rgb(63, 62, 62);
     opacity: 0.9;
     padding: 5%;
-    border-radius: 1em;
+    font-size: 1rem;
+    border-radius: 0.8rem;
  }
+ .tituloFormulario{
+    text-align: center;
+    font-size: 0.80em;
+}
 .camposContacto{
     display: flex;
     flex-direction: column;
@@ -147,11 +148,11 @@ main{
 }
 .errorFormulario{
     color:red;
-    font-size: 0.75em;
+    font-size: 0.70em;
 }
 .inputsFormulario{
-    font-size: 0.75em;
-    width: 70%;
+    font-size: 0.65em;
+    width: 75%;
 }
 .botonesContacto{
     padding-top: 10%;
@@ -159,7 +160,7 @@ main{
 }
 .botonContacto{
     font-size: 0.60em;
-    width:35%
+    width:37%
 }
 
 /* LISTADO PRODUCTOS */
@@ -243,20 +244,21 @@ main{
 
 footer{
     width: 100vw;
-    background-color: #000
+    background-color: #000;
+    font-size: 1rem;
 }
 .textoFooter{
     padding:10vw;
     color:#fff;  
 }
 .linkCompra{
-    font-size: 0.60em;
+    font-size: 0.70em;
 }
 footer a{
     color: red;
 }
 .descripcionFooter{
-    font-size: 0.60em;
+    font-size: 0.65em;
 }
 
 /* ---- ADMIN ------ */
@@ -332,100 +334,52 @@ footer a{
 @media only screen and (min-width:480px) {
 
     /* Header */
+    header{
+        font-size: 1.3rem;
+    }
     .logo{
-        width: 3em;
-        height: 3em;
-        margin-left:2%;
-        
+        width: 4em;
+        height: 4em;
     }
-    .linkContacto{
-        font-size: 0.90em;
-    }
-    .mail{
-        font-size: 0.90em;
-        color:#fff;
-    }
-    .whatsapp{
-        font-size: 1.2em;
-    }
-    .facebook{
-        font-size: 1.2em;
-    }
-    .instagram{
-        font-size: 1.2em;
-    }
-
     /* FOOTER*/
-    .linkCompra{
-        font-size: 1em;
-    }
-    .descripcionFooter{
-        font-size: 0.80em;
+    footer{
+        font-size: 1.3rem;
     }
 
     /*CONTACTANOS*/
-    .tituloFormulario{
-        font-size: 1em;
-    }
-    .errorFormulario{
-        font-size: 0.90em;
+    .formulario{
+        font-size: 1.3rem;
     }
     .inputsFormulario{
-        font-size: 0.90em;
         width: 90%;
     }
     .botonContacto{
-        font-size: 0.90em;
         width:40%
     }
 }
 
 @media only screen and (min-width:768px){
     /* Header */
+    header{
+        font-size: 1.70rem;
+    }
     .logo{
         width: 4em;
         height: 4em;
-        margin-left:2%;
-        
-    }
-    .linkContacto{
-        font-size: 0.90em;
-    }
-    .mail{
-        font-size: 0.90em;
-        color:#fff;
-    }
-    .whatsapp{
-        font-size: 1.2em;
-    }
-    .facebook{
-        font-size: 1.2em;
-    }
-    .instagram{
-        font-size: 1.2em;
     }
 
     /* FOOTER*/
-    .linkCompra{
-        font-size: 1.5em;
+    footer{
+        font-size: 1.70rem;
     }
     .descripcionFooter{
-        font-size: 1em;
+        font-size: 0.55em;
     }
 
     /*CONTACTANOS*/
-    .tituloFormulario{
-        font-size: 1.5em;
-    }
-    .errorFormulario{
-        font-size: 0.90em;
-    }
-    .inputsFormulario{
-        font-size: 0.90em;
-        width: 90%;
-    }
-    .botonContacto{
-        font-size: 0.90em;
-        width:40%
+    .formulario{
+        font-size: 2rem;
     }
 }
+
+@media only screen and (min-width:1280px){}
