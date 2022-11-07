@@ -19,7 +19,7 @@ const controladorAdmin = {
     detalle:(req,res)=>{
         db.Producto.findOne({
             where:{codigo:req.params.id},
-            include:[{association:"productoCategoria"}]
+            include:[{association:"productoCategoria"},{association:"productoTamanio"}]
         })
         .then((producto)=>{
             res.render("detalle",{producto});

@@ -61,15 +61,19 @@ function productoData(sequelize,Datatypes){
         Producto.belongsTo(modelos.Tamanios,{
             as:'productoTamanio',
             foreignKey:"idTamanios"
-        });
-    };
-
-    Producto.associate = function(modelos){
+        }),
         Producto.belongsTo(modelos.Categorias,{
             as:"productoCategoria",
             foreignKey:"idCategorias"
         });
     };
+
+    /*Producto.associate = function(modelos){
+        Producto.belongsTo(modelos.Categorias,{
+            as:"productoCategoria",
+            foreignKey:"idCategorias"
+        });
+    };*/
 
     return Producto;
 };
