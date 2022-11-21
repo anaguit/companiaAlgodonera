@@ -5,7 +5,7 @@
     <%- include("../parciales/header") %>
     <div class="banner">
         <div class="textoBanner">
-            <h1>COMPAÑÍA ALGODONERA</h1>
+            <h1 class="tituloBanner">COMPAÑÍA ALGODONERA</h1>
             <p>Bienvenidos a Compañía Algodonera, una empresa <br> 
                 argentina que busca el máximo confort en tu descanso.
             </p>
@@ -13,7 +13,7 @@
     </div>
     <main class="mainHome">
         <section class="mainSuperior">
-            <h3><a href="productos">Mirá todos nuestros productos</a></h3>
+            <h3 class="linkProductos"><a href="productos">Mirá todos nuestros productos</a></h3>
             <div class="buscador">
                 <h3>Buscar</h3>
                 <div class="filtro">
@@ -42,7 +42,7 @@
         </section>
         <section class="seccionesMain">
             <article class="seccionesInicio">
-                <h1>Destacados</h1>
+                <h1 class="tituloSeccion">Destacados</h1>
                 <div class="listadoProductos">
                     <% for(let destacado of destacados){ %>
                         <div class="articuloListado">
@@ -55,7 +55,7 @@
                 </div>
             </article>
             <article class="seccionesInicio">
-                <h1>Ofertas</h1>
+                <h1 class="tituloSeccion">Ofertas</h1>
                 <div class="listadoProductos">
                         <% for(let oferta of ofertas){ %>
                             <div class="articuloListado">
