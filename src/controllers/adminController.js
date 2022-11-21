@@ -161,7 +161,7 @@ const controladorAdmin = {
             where:{codigo:req.params.codigo}
         })
         .then((productoEncontrado)=>{
-           fs.unlinkSync(productoEncontrado.foto);
+           fs.unlinkSync(path.resolve(__dirname,"../.././public/imagenes",productoEncontrado.foto));
            db.Producto.destroy({
             where:{codigo:req.params.codigo}
         })

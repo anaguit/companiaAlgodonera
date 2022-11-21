@@ -337,6 +337,30 @@ footer a{
     border-bottom: #000 2px dashed;
 }
 
+/* --- vistasCortas --- */
+
+.contenedorVistaCorta{
+    padding-top: 40%;
+    padding-bottom: 60%;
+}
+.textoVistaCorta{
+    font-size: 0.80em;
+}
+.linksPosCreado{
+    display: flex;
+    flex-direction: column;
+    padding-bottom:15%;
+}
+.tituloVistaCorta{
+    font-size: 1.2em;
+}
+.contenedorCreado{
+    padding-top: 40%;
+}
+.linkPosCreado{
+    color:#000;
+    padding-top:5%
+}
 /* --- FORMULARIOS ADMIN --- */
 .formularioProducto{
     display: flex;
@@ -436,7 +460,24 @@ footer a{
     .botonBuscador{
         font-size: 0.85em;
     }
+    /* --- vistas cortas --- */
 
+    .contenedorVistaCorta{
+        padding-top: 40%;
+        padding-bottom: 30%;
+    }
+    .textoVistaCorta{
+        font-size: 1em;
+    }
+    .tituloVistaCorta{
+        font-size: 1.5em;
+    }
+    .contenedorCreado{
+        padding-top: 30%;
+    }
+    .linkPosCreado{
+        padding-top:3%
+    }
     /* --- LOGIN --- */
     .formularioLogin{
         padding-top: 25%;
@@ -490,7 +531,17 @@ footer a{
     .textoLogo{
         font-size: 1em
     }
-
+    
+    /* --- VISTAS CORTAS --- */
+    .tituloVistaCorta{
+        font-size: 2em;
+    }
+    .contenedorCreado{
+        padding-top: 25%;
+    }
+    .linkPosCreado{
+        padding-top:2%
+    }
     /* --- LOGIN --- */
     .formularioLogin{
         padding-top: 20%;
