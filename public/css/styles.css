@@ -428,6 +428,15 @@ footer a{
 
     /* ---- ADMIN ---- */
 
+    /* --- HEADER ADMIN --- */
+    .inputBuscador{
+        width: 90%;
+        font-size: 0.85em;
+    }
+    .botonBuscador{
+        font-size: 0.85em;
+    }
+
     /* --- LOGIN --- */
     .formularioLogin{
         padding-top: 25%;
@@ -469,6 +478,18 @@ footer a{
     }
 
     /* ---- ADMIN ---- */
+
+    /* --- HEADER ADMIN --- */
+    .inputBuscador{
+        width: 90%;
+        font-size: 1em;
+    }
+    .botonBuscador{
+        font-size: 1em;
+    }
+    .textoLogo{
+        font-size: 1em
+    }
 
     /* --- LOGIN --- */
     .formularioLogin{
