@@ -4,15 +4,19 @@
 <body>
     <%- include("../parciales/headerAdmin") %>
     <main>
-        <h4>Detalle mensaje</h4>
-        <p><%= mensaje.nombre %></p>
-        <p><%= mensaje.mail %></p>
-        <p><%= mensaje.asunto %></p>
-        <p><%= mensaje.texto %></p>
+        <h1 class="tituloVistaMensaje">Detalle mensaje</h1>
+        <div class="cuerpoMensaje">
+            <p class="textoMensaje">Remitente: <%= mensaje.nombre %></p>
+            <p class="textoMensaje">Contacto: <%= mensaje.mail %></p>
+            <p class="textoMensaje">Asunto: <%= mensaje.asunto %></p>
+            <p class="textoMensaje">Consulta: <%= mensaje.texto %></p>
+        </div>
         <form action="/admin/mensaje/<%= mensaje.id %>?_method=DELETE" method="POST">
-            <button type="submit">Eliminar</button>
+            <button type="submit" class="textoMensaje">Eliminar</button>
         </form>
-        <a href="/admin/mensajes">Volver a los mensajes</a>
+        <div class="linkVolver">
+            <a href="/admin/mensajes" class="textoMensaje">Volver a los mensajes</a>
+        </div>
     </main>
     <%- include("../parciales/footer") %>
 </body>
