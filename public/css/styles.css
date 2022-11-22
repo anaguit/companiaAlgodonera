@@ -337,7 +337,7 @@ footer a{
     border-bottom: #000 2px dashed;
 }
 
-/* --- vistasCortas --- */
+/* --- VISTAS CORTAS --- */
 
 .contenedorVistaCorta{
     padding-top: 40%;
@@ -389,6 +389,23 @@ footer a{
 .linkVolver{
     margin-top: 10%;
     padding-bottom: 10%;
+}
+
+/* --- DETALLE PRODUCTO --- */
+.contenedorDetalleProducto{
+    display: flex;
+    justify-content: space-between;
+    padding-top:10%;
+}
+.datosProducto{
+    font-size: 0.75em;
+}
+.botonesDetalleProducto{
+    display: flex;
+}
+.botonDetalleProducto{
+    margin-right: 1%;
+    font-size: 0.75em;
 }
 /* --- FORMULARIOS ADMIN --- */
 .formularioProducto{
@@ -531,6 +548,14 @@ footer a{
     .textoMensaje{
         font-size:0.90em;
     }
+
+    /* --- DETALLE PRODUCTO --- */
+    .datosProducto{
+        font-size: 0.90em;
+    }
+    .botonDetalleProducto{
+        font-size: 0.90em;
+    }
 }
 
 @media only screen and (min-width:768px){
@@ -606,6 +631,17 @@ footer a{
     }
     .textoMensaje{
         font-size:1em;
+    }
+
+    /* --- DETALLE PRODUCTO --- */
+    .contenedorDetalleProducto{
+        padding-top:5%;
+    }
+    .datosProducto{
+        font-size: 1em;
+    }
+    .botonDetalleProducto{
+        font-size: 1em;
     }
 }
 

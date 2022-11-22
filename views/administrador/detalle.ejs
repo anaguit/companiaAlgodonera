@@ -4,21 +4,29 @@
 <body>
     <%- include("../parciales/headerAdmin") %>
     <main>
-        <p>Producto: <%= producto.nombre %></p>
-        <p>Modelo: <%= producto.modelo %></p>
-        <p>Marca: <%= producto.marca %></p>
-        <p>Categoría: <%= producto.productoCategoria.nombre %></p>
-        <p>Tamaño: <%= producto.productoTamanio.tamanio %> </p>
-        <p>Medidas: <%= producto.medidas %></p>
-        <p>Descripción: <%= producto.descripcion %></p>
-        <p>Codigo: <%= producto.codigo %></p>
-        <p>Destacado: <%= producto.destacado %></p>
-        <p>En oferta: <%= producto.oferta %></p>
-        <img src="/imagenes/<%= producto.foto %>" width="100px">
-        <button><a href="/admin/producto/<%= producto.codigo %>">Editar</a></button>
-        <form action="/admin/producto/<%= producto.codigo %>?_method=DELETE" method="POST">
-            <button type="submit">Borrar</button>
-        </form>
+        <div class="contenedorDetalleProducto">
+            <div class="datosProducto">
+                <p>Producto: <%= producto.nombre %></p>
+                <p>Modelo: <%= producto.modelo %></p>
+                <p>Marca: <%= producto.marca %></p>
+                <p>Categoría: <%= producto.productoCategoria.nombre %></p>
+                <p>Tamaño: <%= producto.productoTamanio.tamanio %> </p>
+                <p>Medidas: <%= producto.medidas %></p>
+                <p>Descripción: <%= producto.descripcion %></p>
+                <p>Codigo: <%= producto.codigo %></p>
+                <p>Destacado: <%= producto.destacado %></p>
+                <p>En oferta: <%= producto.oferta %></p>
+            </div>
+            <div class="imagenProducto">
+                <img src="/imagenes/<%= producto.foto %>" width="100px">
+            </div>
+        </div>
+        <div class="botonesDetalleProducto">
+            <button class="botonDetalleProducto"><a href="/admin/producto/<%= producto.codigo %>">Editar</a></button>
+            <form action="/admin/producto/<%= producto.codigo %>?_method=DELETE" method="POST">
+                <button type="submit" class="botonDetalleProducto">Borrar</button>
+            </form>
+        </div>
     </main>
     <%- include("../parciales/footer") %>
 </body>
