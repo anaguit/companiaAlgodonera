@@ -4,10 +4,10 @@
 <body>
     <%- include("../parciales/headerAdmin") %>
     <main>
-        <h4>Listado de productos</h4>
+        <h1 class="tituloVistaMensaje">Listado de productos</h1>
         <% for(producto of productos){ %>
-            <div>
-                <a href="/admin/detalle/<%= producto.codigo %>"><%= producto.nombre %> <%= producto.modelo %></a>
+            <div class="mensajes">
+                <a class="textoMensaje" href="/admin/detalle/<%= producto.codigo %>"><%= producto.nombre %> <%= producto.modelo %></a>
             </div>
         <% } %>
     </main>
