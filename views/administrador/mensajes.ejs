@@ -4,13 +4,17 @@
 <body>
     <%- include("../parciales/headerAdmin") %>
     <main>
-        <h1>Mensajes de visitantes</h1>
+        <h1 class="tituloVistaMensaje">Mensajes de visitantes</h1>
         <ul>
             <% for(let mensaje of mensajes){ %>
-                <form action="/admin/mensaje/<%= mensaje.id %>?_method=DELETE" method="POST">
-                    <li><a href="/admin/mensaje/<%= mensaje.id %>"><%= mensaje.nombre %> <%= mensaje.asunto %> <%= mensaje.mail %></a></li>
-                    <button type="submit">Eliminar</button>
-                </form>
+                <div class="mensajes">
+                    <form action="/admin/mensaje/<%= mensaje.id %>?_method=DELETE" method="POST">
+                        <div class="mensaje">
+                            <a href="/admin/mensaje/<%= mensaje.id %>" class="textoMensaje"><%= mensaje.nombre %> -- <%= mensaje.asunto %></a>
+                            <button type="submit" class="textoMensaje">Eliminar</button>
+                        </div>
+                    </form>
+                </div>
             <% } %>
         </ul>
         <a href="/admin/panel">Volver</a>
