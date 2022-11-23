@@ -3,7 +3,7 @@
 <%- include("../parciales/head") %>
 <body>
     <%- include("../parciales/headerAdmin") %>
-    <main>
+    <main class="contenedorMensajes">
         <h1 class="tituloVistaMensaje">Mensajes de visitantes</h1>
         <ul>
             <% for(let mensaje of mensajes){ %>
@@ -17,7 +17,7 @@
                 </div>
             <% } %>
         </ul>
-        <a href="/admin/panel">Volver</a>
+        <a href="/admin/panel" class="linkVolver">Volver</a>
     </main>
     <%- include("../parciales/footer") %>
 </body>

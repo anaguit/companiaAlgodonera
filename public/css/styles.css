@@ -378,22 +378,30 @@ footer a{
 }
 
 /* --- MENSAJES CLIENTES --- */
+.contenedorMensajes{
+    font-size: 1rem;
+    padding-top: 30%;
+}
 .tituloVistaMensaje{
-    padding-top: 15%;
     text-align: center;
-    font-size: 0.80em;
+    font-size: 0.85em;
 }
 .mensajes{
+    font-size: 0.75em;
+    color:#000;
     margin-bottom: 2%;
     padding-bottom: 1%;
-    border-bottom: #000 1px dashed;
+    border-bottom: #000 0.1em dashed;
 }
 .mensaje{
     display: flex;
     justify-content: space-between;
 }
 .textoMensaje{
-    font-size:0.80em;
+    color:#000;
+}
+.linkVolver{
+    font-size: 0.75em;
     color:#000;
 }
 
@@ -612,13 +620,11 @@ footer a{
     }
 
     /* --- MENSAJES CLIENTES --- */
-    .tituloVistaMensaje{
-        padding-top: 10%;
-        font-size: 1em;
+    .contenedorMensajes{
+        font-size: 1.2rem;
+        padding-top: 30%;
     }
-    .textoMensaje{
-        font-size:0.90em;
-    }
+
     /* --- LISTA PRODUCTOS --- */
     .contenedorListaProductos{
         padding-top: 30%;
@@ -715,11 +721,9 @@ footer a{
     }
 
     /* --- MENSAJES CLIENTES --- */
-    .tituloVistaMensaje{
-        padding-top: 6%;
-    }
-    .textoMensaje{
-        font-size:1em;
+    .contenedorMensajes{
+        font-size: 1.3rem;
+        padding-top: 25%;
     }
 
     /* --- LISTA PRODUCTOS --- */
@@ -774,8 +778,9 @@ footer a{
     }
 
     /* --- MENSAJES CLIENTES --- */
-    .tituloVistaMensaje{
-        padding-top: 2%;
+    .contenedorMensajes{
+        font-size: 1.3rem;
+        padding-top: 30%;
     }
 
     /* --- FORMULARIO CREAR --- */
