@@ -440,6 +440,9 @@ footer a{
     text-align: center;
     font-size: 0.80em;
 }
+.labelInput{
+    font-size: 0.70em;
+}
 .inputsProducto{
     display: flex;
     flex-direction: column;

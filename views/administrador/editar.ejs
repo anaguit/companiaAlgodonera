@@ -3,37 +3,37 @@
 <%- include("../parciales/head") %>
 <body>
     <%- include("../parciales/headerAdmin") %>
-    <main>
+    <main class="formularioCrear">
         <div class="formularioProducto">
-            <h3>Editar producto <%= producto.codigo %></h3>
+            <h3 class="tituloFormularioProducto">Editar producto <%= producto.codigo %></h3>
             <form action="/admin/producto/<%= producto.codigo %>?_method=PUT" method="POST" enctype="multipart/form-data">
                 <div class="inputsProducto">
-                    <p>Código</p>
-                    <input type="text" name="codigo" value="<%= producto.codigo %>">
+                    <p class="labelInput">Código</p>
+                    <input type="text" name="codigo" class="inputsCrear" value="<%= producto.codigo %>">
                 </div>
                 <div class="inputsProducto">
-                    <p>Nombre</p>
-                    <input type="text" name="nombre" value="<%= producto.nombre %>">
+                    <p class="labelInput">Nombre</p>
+                    <input type="text" name="nombre" class="inputsCrear" value="<%= producto.nombre %>">
                 </div>
                 <div class="inputsProducto">
-                    <p>Modelo</p>
-                    <input type="text" name="modelo" value="<%= producto.modelo %>">
+                    <p class="labelInput">Modelo</p>
+                    <input type="text" name="modelo" class="inputsCrear" value="<%= producto.modelo %>">
                 </div>
                 <div class="inputsProducto">
-                    <p>Marca</p>
-                    <input type="text" name="marca" value="<%= producto.marca %>">
+                    <p class="labelInput">Marca</p>
+                    <input type="text" name="marca" class="inputsCrear" value="<%= producto.marca %>">
                 </div>
                 <div class="inputsProducto">
-                    <p>Descripción</p>
-                    <textarea name="descripcion"><%= producto.descripcion %></textarea>
+                    <p class="labelInput">Descripción</p>
+                    <textarea name="descripcion" class="inputsCrear"><%= producto.descripcion %></textarea>
                 </div>
                 <div class="inputsProducto">
-                    <p>Medidas</p>
-                    <input type="text" name="medidas" value="<%= producto.medidas %>">
+                    <p class="labelInput">Medidas</p>
+                    <input type="text" name="medidas" class="inputsCrear" value="<%= producto.medidas %>">
                 </div>
                 <div class="inputsProducto">
-                    <p>categoria</p>
-                    <select name="categoria">
+                    <p class="labelInput">categoria</p>
+                    <select name="categoria" class="inputsCrear">
                         <option value="" >Seleccioná opción</option> 
                         <% for(let categoria of categorias) { %> 
                             <option value="<%= categoria.id %>" <%= categoria.id === producto.idCategorias ? 'selected' : "" %>>
@@ -42,8 +42,8 @@
                     </select>
                 </div>
                 <div class="inputsProducto">
-                    <p>Tamaño</p>
-                    <select name="tamanio">
+                    <p class="labelInput">Tamaño</p>
+                    <select name="tamanio" class="inputsCrear">
                         <option value="">Seleccioná tamaño</option>
                         <% for(let tamanio of tamanios){ %>
                             <option value="<%= tamanio.id %>" <%= tamanio.id === producto.idTamanios ? 'selected' : "" %>>
@@ -51,20 +51,24 @@
                         <% } %>
                     </select>
                 </div>
-                <div class="inputProducto">
-                    <input type="radio" name="destacado" value="si" <%= producto.destacado ==='si'?'checked':"" %>>Destacado
-                    <input type="radio" name="destacado" value="no" <%= producto.destacado === 'no'?'checked':"" %>>No destacado
-                </div>
-                <div class="inputProducto">
-                    <input type="radio" name="oferta" value="si" <%= producto.oferta === "si"?'checked':"" %>>En oferta
-                    <input type="radio" name="oferta" value="no" <%= producto.oferta === "no"?'checked':"" %>>Sin oferta
+                <div class="inputsProducto">
+                    <div class="inputsCrear">
+                        <input type="radio" name="destacado" value="si" <%= producto.destacado ==='si'?'checked':"" %>>Destacado
+                        <input type="radio" name="destacado" value="no" <%= producto.destacado === 'no'?'checked':"" %>>No destacado
+                    </div>
                 </div>
                 <div class="inputsProducto">
-                    <input type="file" name="foto" accept=".jpg,.jpeg">
+                    <div class="inputsCrear">
+                        <input type="radio" name="oferta" value="si" <%= producto.oferta === "si"?'checked':"" %>>En oferta
+                        <input type="radio" name="oferta" value="no" <%= producto.oferta === "no"?'checked':"" %>>Sin oferta
+                    </div>
                 </div>
-                <div class="botonesProducto">
-                    <button type="submit" class="botonProducto">Enviar</button>
-                    <button type="reset" class="botonProducto">Cancelar</button>
+                <div class="inputsProducto">
+                    <input type="file" name="foto" class="inputsCrear" accept=".jpg,.jpeg">
+                </div>
+                <div class="botonesCrear">
+                    <button type="submit" class="botonCrear">Enviar</button>
+                    <button type="reset" class="botonCrear">Cancelar</button>
                 </div>
             </form>
         </div>
