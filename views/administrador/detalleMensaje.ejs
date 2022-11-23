@@ -3,17 +3,17 @@
 <%- include("../parciales/head") %>
 <body>
     <%- include("../parciales/headerAdmin") %>
-    <main>
+    <main class="contenedorMensajes">
         <h1 class="tituloVistaMensaje">Detalle mensaje</h1>
-        <div class="cuerpoMensaje">
+        <div class="mensajes">
             <p class="textoMensaje">Remitente: <%= mensaje.nombre %></p>
             <p class="textoMensaje">Contacto: <%= mensaje.mail %></p>
             <p class="textoMensaje">Asunto: <%= mensaje.asunto %></p>
             <p class="textoMensaje">Consulta: <%= mensaje.texto %></p>
+            <form action="/admin/mensaje/<%= mensaje.id %>?_method=DELETE" method="POST">
+                <button type="submit" class="textoMensaje">Eliminar</button>
+            </form>
         </div>
-        <form action="/admin/mensaje/<%= mensaje.id %>?_method=DELETE" method="POST">
-            <button type="submit" class="textoMensaje">Eliminar</button>
-        </form>
         <div class="linkVolver">
             <a href="/admin/mensajes" class="textoMensaje">Volver a los mensajes</a>
         </div>
