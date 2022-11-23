@@ -3,10 +3,10 @@
 <%- include("../parciales/head") %>
 <body>
     <%- include("../parciales/headerAdmin") %>
-    <main>
-        <h1 class="tituloVistaMensaje">Listado de productos</h1>
+    <main class="contenedorListaProductos">
+        <h1 class="tituloListaProductos">Listado de productos</h1>
         <% for(producto of productos){ %>
-            <div class="mensajes">
+            <div class="linkProducto">
                 <a class="textoMensaje" href="/admin/detalle/<%= producto.codigo %>"><%= producto.nombre %> <%= producto.modelo %></a>
             </div>
         <% } %>

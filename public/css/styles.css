@@ -396,6 +396,19 @@ footer a{
     padding-bottom: 10%;
 }
 
+/* --- LISTA PRODUCTOS --- */
+.contenedorListaProductos{
+    font-size: 1rem;
+    padding-top: 35%;
+}
+.tituloListaProductos{
+    font-size: 0.85em;
+    text-align: center;
+}
+.linkProducto{
+    font-size: 0.75em;
+    border-bottom: #000 0.1em dashed;
+}
 /* --- DETALLE PRODUCTO --- */
 .contenedorDetalleProducto{
     display: flex;
@@ -595,7 +608,11 @@ footer a{
     .textoMensaje{
         font-size:0.90em;
     }
-
+    /* --- LISTA PRODUCTOS --- */
+    .contenedorListaProductos{
+        padding-top: 30%;
+        font-size: 1.2rem;
+    }
     /* --- DETALLE PRODUCTO --- */
     .datosProducto{
         font-size: 0.90em;
@@ -694,6 +711,11 @@ footer a{
         font-size:1em;
     }
 
+    /* --- LISTA PRODUCTOS --- */
+    .contenedorListaProductos{
+        padding-top: 28%;
+        font-size: 1.3rem;
+    }
     /* --- DETALLE PRODUCTO --- */
     .contenedorDetalleProducto{
         padding-top:5%;
