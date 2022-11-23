@@ -319,22 +319,27 @@ footer a{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 30%;
-    padding-bottom: 10%;
+    padding-top: 35%;
+    padding-bottom: 35%;
+    font-size: 1rem;
+}
+.tituloPanel{
+    font-size: 0.85em;
 }
 .linksPanel{
     display: flex;
     flex-direction: column;
-    padding: 5%;
+    padding: 10%;
     background-color: #dc9f7c;
-    border: #000 3px solid;
+    border: #000 0.10em solid;
+    font-size: 0.75em;
 }
 .links{
     text-align: center;
     padding: 10px;
     color: #000;
     margin-bottom:  10px;
-    border-bottom: #000 2px dashed;
+    border-bottom: #000 0.10em dashed;
 }
 
 /* --- VISTAS CORTAS --- */
@@ -483,7 +488,7 @@ footer a{
 
     /*CONTACTANOS*/
     .formulario{
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
     .inputsFormulario{
         width: 90%;
@@ -575,6 +580,13 @@ footer a{
         padding: 1%;
     }
 
+    /* --- PANEL --- */
+
+    .panel{
+        padding-top: 30%;
+        font-size: 1.2rem;
+    }
+
     /* --- MENSAJES CLIENTES --- */
     .tituloVistaMensaje{
         padding-top: 10%;
@@ -597,7 +609,7 @@ footer a{
         padding-top: 32%;
     }
     .formularioProducto{
-        font-size: 1.3rem;    
+        font-size: 1.2rem;    
     }        
 }
 
@@ -668,6 +680,12 @@ footer a{
         padding: 1%;
     }
 
+    /* --- PANEL --- */
+    .panel{
+        padding-top: 28%;
+        font-size: 1.3rem;
+    }
+
     /* --- MENSAJES CLIENTES --- */
     .tituloVistaMensaje{
         padding-top: 6%;
@@ -687,7 +705,7 @@ footer a{
         font-size: 1em;
     }
     .formularioProducto{
-        font-size: 2rem;    
+        font-size: 1.3rem;    
     } 
 
     /* --- FORMULARIO CREAR --- */
@@ -714,6 +732,8 @@ footer a{
         max-width:15%;
     }
 
+    /* --- PANEL --- */
+    
     /* --- VISTAS CORTAS --- */
     .contenedorVistaCorta{
         padding-top: 25%;
