@@ -3,70 +3,74 @@
 <%- include("../parciales/head") %>
 <body>
     <%- include("../parciales/headerAdmin") %>
-    <main>
+    <main class="formularioCrear">
         <div class="formularioProducto">
-        <h1>Crear producto</h1>
-        <form action="/admin/crear" method="POST" enctype="multipart/form-data">
-            <div class="inputsProducto">
-                <p style="color:red"><%= locals.errores && errores.codigo ? errores.codigo.msg : "" %></p>
-                <input type="text" name="codigo" placeholder="codigo" value="<%= locals.data && locals.data.codigo ? data.codigo:'' %>"  >
-            </div>
-            <div class="inputsProducto">
-                <p style="color:red"><%= locals.errores && errores.nombre ? errores.nombre.msg:"" %></p>
-                <input type="text" name="nombre" placeholder="producto" value="<%= locals.data && locals.data.nombre ? data.nombre:'' %>">
-            </div>
-            <div class="inputsProducto">
-                <p style="color:red"><%= locals.errores && errores.modelo ? errores.modelo.msg : "" %></p>
-                <input type="text" name="modelo" placeholder="modelo" value="<%= locals.data && locals.data.modelo ? data.modelo:'' %>">
-            </div>
-            <div class="inputsProducto">
-                <p style="color:red"><%= locals.errores && errores.marca ? errores.marca.msg : "" %></p>
-                <input type="text" name="marca" placeholder="marca" value="<%= locals.data && locals.data.marca ? data.marca:'' %>">
-            </div>
-            <div class="inputsProducto">
-                <p style="color:red"><%= locals.errores && errores.descripcion ? errores.descripcion.msg : "" %></p>
-                <textarea name="descripcion" placeholder="descripcion"><%= locals.data && locals.data.descripcion ? data.descripcion : '' %></textarea>
-            </div>
-            <div class="inputsProducto">
-                <p style="color:red"><%= locals.errores && errores.medidas ? errores.medidas.msg : "" %></p>
-                <input type="text" name="medidas" placeholder="medidas" value="<%= locals.data && locals.data.medidas ? data.medidas:'' %>">
-            </div>
-            <div class="inputsProducto">
-                <p style="color:red"><%= locals.errores && errores.categoria ? errores.categoria.msg : "" %></p>
-                <select name="categoria">
-                    <option value="">Seleccioná una categoría</option>
-                    <% for(let categoria of categorias){ %>
-                        <option value="<%= categoria.id %>" <%= locals.data && (data.categoria == categoria.id) ? "selected":null %>><%= categoria.nombre %></option>
-                    <% } %>
-                </select>
-            </div>
-            <div class="inputsProducto">
-                <p style="color:red"><%= locals.errores && errores.tamanio ? errores.tamanio.msg : "" %></p>
-                <select name="tamanio">
-                    <option value="">Seleccioná un tamaño</option>
-                    <% for(let tamanio of tamanios){ %>
-                        <option value="<%= tamanio.id %>" <%= locals.data && (data.tamanio == tamanio.id) ? "selected":null %>><%= tamanio.tamanio %></option>
-                    <% } %>
-                </select>
-            </div>
-            <div class="inputProducto">
-                <p style="color:red"><%= locals.errores && errores.destacado ? errores.destacado.msg : "" %></p>
-                <input type="radio" name="destacado" value="si" <%= locals.data && (data.destacado == "si") ? "checked" : "" %>>Destacado
-                <input type="radio" name="destacado" value="no" <%= locals.data && (data.destacado == "no") ? "checked" : "" %>>No destacado
-            </div>
-            <div class="inputProducto">
-                <p style="color:red"><%= locals.errores && errores.oferta ? errores.oferta.msg : "" %></p>
-                <input type="radio" name="oferta" value="si" <%= locals.data && (data.oferta == "si") ? "checked":"" %>>En oferta
-                <input type="radio" name="oferta" value="no"<%= locals.data && (data.oferta == "no") ? "checked":"" %>>Sin oferta
-            </div>
-            <div class="inputsProducto">
-                <input type="file" name="foto" accept=".jpeg, .jpg">
-            </div>
-            <div class="botonesProducto">
-                <button type="submit" class="botonProducto">Crear</button>
-                <button type="reset" class="botonProducto">Cancelar</button>
-            </div>
-        </form>
+            <h3 class="tituloFormularioProducto">Crear producto</h3>
+            <form action="/admin/crear" method="POST" enctype="multipart/form-data">
+                <div class="inputsProducto">
+                    <p class="errorCrear"><%= locals.errores && errores.codigo ? errores.codigo.msg : "" %></p>
+                    <input type="text" name="codigo" class="inputsCrear" placeholder="codigo" value="<%= locals.data && locals.data.codigo ? data.codigo:'' %>">
+                </div>
+                <div class="inputsProducto">
+                    <p class="errorCrear"><%= locals.errores && errores.nombre ? errores.nombre.msg:"" %></p>
+                    <input type="text" name="nombre" class="inputsCrear" placeholder="producto" value="<%= locals.data && locals.data.nombre ? data.nombre:'' %>">
+                </div>
+                <div class="inputsProducto">
+                    <p class="errorCrear"><%= locals.errores && errores.modelo ? errores.modelo.msg : "" %></p>
+                    <input type="text" name="modelo" class="inputsCrear" placeholder="modelo" value="<%= locals.data && locals.data.modelo ? data.modelo:'' %>">
+                </div>
+                <div class="inputsProducto">
+                    <p class="errorCrear"><%= locals.errores && errores.marca ? errores.marca.msg : "" %></p>
+                    <input type="text" name="marca" class="inputsCrear" placeholder="marca" value="<%= locals.data && locals.data.marca ? data.marca:'' %>">
+                </div>
+                <div class="inputsProducto">
+                    <p class="errorCrear"><%= locals.errores && errores.descripcion ? errores.descripcion.msg : "" %></p>
+                    <textarea name="descripcion" class="inputsCrear" placeholder="descripcion"><%= locals.data && locals.data.descripcion ? data.descripcion : '' %></textarea>
+                </div>
+                <div class="inputsProducto">
+                    <p class="errorCrear"><%= locals.errores && errores.medidas ? errores.medidas.msg : "" %></p>
+                    <input type="text" name="medidas" class="inputsCrear" placeholder="medidas" value="<%= locals.data && locals.data.medidas ? data.medidas:'' %>">
+                </div>
+                <div class="inputsProducto">
+                    <p class="errorCrear"><%= locals.errores && errores.categoria ? errores.categoria.msg : "" %></p>
+                    <select name="categoria" class="inputsCrear">
+                        <option value="">Seleccioná una categoría</option>
+                        <% for(let categoria of categorias){ %>
+                            <option value="<%= categoria.id %>" <%= locals.data && (data.categoria == categoria.id) ? "selected":null %>><%= categoria.nombre %></option>
+                        <% } %>
+                    </select>
+                </div>
+                <div class="inputsProducto">
+                    <p class="errorCrear"><%= locals.errores && errores.tamanio ? errores.tamanio.msg : "" %></p>
+                    <select name="tamanio" class="inputsCrear">
+                        <option value="">Seleccioná un tamaño</option>
+                        <% for(let tamanio of tamanios){ %>
+                            <option value="<%= tamanio.id %>" <%= locals.data && (data.tamanio == tamanio.id) ? "selected":null %>><%= tamanio.tamanio %></option>
+                        <% } %>
+                    </select>
+                </div>
+                <!--<div class="inputProducto">
+                    <p class="errorCrear"><%= locals.errores && errores.destacado ? errores.destacado.msg : "" %></p>
+                    <div class="inputsCrear">
+                        <input type="radio" name="destacado" value="si" <%= locals.data && (data.destacado == "si") ? "checked" : "" %>>Destacado
+                        <input type="radio" name="destacado" value="no" <%= locals.data && (data.destacado == "no") ? "checked" : "" %>>No destacado
+                    </div>
+                </div>
+                <div class="inputProducto">
+                    <p class="errorCrear"><%= locals.errores && errores.oferta ? errores.oferta.msg : "" %></p>
+                    <div class="inputsCrear">
+                        <input type="radio" name="oferta" value="si" class="inputsCrear"<%= locals.data && (data.oferta == "si") ? "checked":"" %>>En oferta
+                        <input type="radio" name="oferta" value="no" class="inputsCrear"<%= locals.data && (data.oferta == "no") ? "checked":"" %>>Sin oferta
+                    </div>
+                </div>-->
+                <div class="inputsProducto">
+                    <input type="file" name="foto" class="inputsCrear" accept=".jpeg, .jpg">
+                </div>
+                <div class="botonesCrear">
+                    <button type="submit" class="botonCrear">Crear</button>
+                    <button type="reset" class="botonCrear">Cancelar</button>
+                </div>
+            </form>
         </div>
     </main>
     <%- include("../parciales/footer") %>
