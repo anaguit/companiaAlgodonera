@@ -27,19 +27,24 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: 1rem;
+}
+.contenedorLogoAdmin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1rem;
 }
 .logo{
     width: 3em;
     height: 3em;
     margin-left:2%;
 }
-.textoLogo{
-    font-size: 0.75em
-}
 .textoHeader{
     display: flex;
     flex-direction: column;
-    align-items:flex-end
+    align-items:flex-end;
+    font-size: 1rem;
 }
 .linkContacto{
     font-size: 0.85em;
@@ -278,6 +283,22 @@ footer a{
 /* ---- ADMIN ------ */
 
 /* --- HEADER ADMIN --- */
+.contenedorHeaderAdmin{
+    font-size: 1rem;
+}
+.logoAdmin{
+    width: 3em;
+    height: 3em;
+    margin-left:2%;
+}
+.textoLogo{
+    font-size: 0.75em
+}
+.textoHeaderAdmin{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-end;
+}
 .inputBuscador{
     width: 90%;
     font-size: 0.75em;
@@ -512,13 +533,13 @@ footer a{
 @media only screen and (min-width:480px) {
 
     /* Header */
-    header{
-        font-size: 1.3rem;
+    .contenedorLogo{
+        font-size: 1.2rem;
     }
-    .logo{
-        width: 4em;
-        height: 4em;
+    .textoHeader{
+        font-size: 1.2rem;
     }
+
     /* FOOTER*/
     footer{
         font-size: 1.3rem;
@@ -577,12 +598,11 @@ footer a{
     /* ---- ADMIN ---- */
 
     /* --- HEADER ADMIN --- */
-    .inputBuscador{
-        width: 90%;
-        font-size: 0.85em;
+    .contenedorHeaderAdmin{
+        font-size: 1.2rem;
     }
-    .botonBuscador{
-        font-size: 0.85em;
+    .contenedorLogoAdmin{
+        font-size: 1.2rem;
     }
     /* --- vistas cortas --- */
 
@@ -653,13 +673,13 @@ footer a{
 }
 
 @media only screen and (min-width:768px){
+    
     /* Header */
-    /*header{
-        font-size: 1.70rem;
-    }*/
-    .logo{
-        width: 5em;
-        height: 5em;
+    .contenedorLogo{
+        font-size: 1.3rem;
+    }
+    .textoHeader{
+        font-size: 1.3rem;
     }
 
     /* FOOTER*/
@@ -678,17 +698,12 @@ footer a{
     /* ---- ADMIN ---- */
 
     /* --- HEADER ADMIN --- */
-    .inputBuscador{
-        width: 90%;
-        font-size: 1em;
+    .contenedorHeaderAdmin{
+        font-size: 1.3rem;
     }
-    .botonBuscador{
-        font-size: 1em;
+    .contenedorLogoAdmin{
+        font-size: 1.3rem;
     }
-    .textoLogo{
-        font-size: 1em
-    }
-    
     /* --- VISTAS CORTAS --- */
     .contenedorVistaCorta{
         padding-top: 30%;
@@ -750,8 +765,11 @@ footer a{
 
 @media only screen and (min-width:1280px){
     
+    /* --- HEADER --- */
     /* --- ADMIN --- */
 
+    /* --- HEADER ADMIN --- */
+    
     /* --- LOGIN --- */
     .formularioLogin{
         padding-top: 20%;
