@@ -49,20 +49,20 @@
                         <% } %>
                     </select>
                 </div>
-                <!--<div class="inputProducto">
+                <div class="inputsProducto">
                     <p class="errorCrear"><%= locals.errores && errores.destacado ? errores.destacado.msg : "" %></p>
                     <div class="inputsCrear">
                         <input type="radio" name="destacado" value="si" <%= locals.data && (data.destacado == "si") ? "checked" : "" %>>Destacado
                         <input type="radio" name="destacado" value="no" <%= locals.data && (data.destacado == "no") ? "checked" : "" %>>No destacado
                     </div>
                 </div>
-                <div class="inputProducto">
+                <div class="inputsProducto">
                     <p class="errorCrear"><%= locals.errores && errores.oferta ? errores.oferta.msg : "" %></p>
                     <div class="inputsCrear">
-                        <input type="radio" name="oferta" value="si" class="inputsCrear"<%= locals.data && (data.oferta == "si") ? "checked":"" %>>En oferta
-                        <input type="radio" name="oferta" value="no" class="inputsCrear"<%= locals.data && (data.oferta == "no") ? "checked":"" %>>Sin oferta
+                        <input type="radio" name="oferta" value="si" <%= locals.data && (data.oferta == "si") ? "checked":"" %>>En oferta
+                        <input type="radio" name="oferta" value="no" <%= locals.data && (data.oferta == "no") ? "checked":"" %>>Sin oferta
                     </div>
-                </div>-->
+                </div>
                 <div class="inputsProducto">
                     <input type="file" name="foto" class="inputsCrear" accept=".jpeg, .jpg">
                 </div>

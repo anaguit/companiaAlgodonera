@@ -588,6 +588,14 @@ footer a{
     .botonDetalleProducto{
         font-size: 0.90em;
     }
+
+    /* --- FORMULARIO CREAR --- */
+    .formularioCrear{
+        padding-top: 32%;
+    }
+    .formularioProducto{
+        font-size: 1.3rem;    
+    }        
 }
 
 @media only screen and (min-width:768px){
@@ -675,6 +683,14 @@ footer a{
     .botonDetalleProducto{
         font-size: 1em;
     }
+    .formularioProducto{
+        font-size: 2rem;    
+    } 
+
+    /* --- FORMULARIO CREAR --- */
+    .formularioCrear{
+        padding-top: 28%;
+    }
 }
 
 @media only screen and (min-width:1280px){
@@ -704,5 +720,10 @@ footer a{
     /* --- MENSAJES CLIENTES --- */
     .tituloVistaMensaje{
         padding-top: 2%;
+    }
+
+    /* --- FORMULARIO CREAR --- */
+    .formularioCrear{
+        padding-top: 18%;
     }
 }
