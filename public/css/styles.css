@@ -292,13 +292,23 @@ footer a{
     flex-direction: column;
     align-items: center;
     padding-top: 30%;
-    padding-bottom: 10%;
+    padding-bottom: 30%;
+    font-size: 1rem;
+}
+.tituloLogin{
+    font-size: 0.85em;
+}
+.errorLogin{
+    font-size: 0.75em;
+    text-align: center;
+    color:red;
 }
 .camposLogin{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;  
+    justify-content: space-around;
+    font-size: 0.75em;  
 }
 .inputsLogin{
     width: 50vw;
@@ -309,7 +319,7 @@ footer a{
 }
 .botonLogin{
     width:23vw;
-    font-size: 0.7em;
+    font-size: 0.75em;
     padding: 3%;
 }
 
@@ -580,6 +590,8 @@ footer a{
     /* --- LOGIN --- */
     .formularioLogin{
         padding-top: 25%;
+        padding-bottom: 20%;
+        font-size: 1.2rem;
     }
     .inputsLogin{
         max-width: 70%;
@@ -588,8 +600,7 @@ footer a{
         padding-top: 10%;
     }
     .botonLogin{
-        max-width:35%;
-        font-size: 1em;
+        max-width:33%;
         padding: 1%;
     }
 
@@ -683,7 +694,8 @@ footer a{
     }
     /* --- LOGIN --- */
     .formularioLogin{
-        padding-top: 20%;
+        padding-top: 23%;
+        font-size: 1.3rem
     }
     .inputsLogin{
         max-width: 50%;
@@ -693,7 +705,6 @@ footer a{
     }
     .botonLogin{
         max-width:25%;
-        font-size: 1em;
         padding: 1%;
     }
 
@@ -742,7 +753,7 @@ footer a{
 
     /* --- LOGIN --- */
     .formularioLogin{
-        padding-top: 10%;
+        padding-top: 20%;
     }
     .inputsLogin{
         max-width: 30%;

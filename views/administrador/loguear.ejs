@@ -4,9 +4,9 @@
 <body>
     <%- include("../parciales/header") %>
     <main class="formularioLogin">
-        <h2>Ingresá</h2>
+        <h1 class="tituloLogin">Ingresá</h1>
         <form action="/admin" method="POST" class="login">
-            <p style="color:red"><%= locals.error ? error:"" %></p>
+            <p class="errorLogin"><%= locals.error ? error:"" %></p>
             <div class="camposLogin">
                 <p>Email</p>
                 <input type="text" name="email" class="inputsLogin">
