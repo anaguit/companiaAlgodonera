@@ -3,8 +3,9 @@
 <%- include("../parciales/head") %>
 <body>
     <%- include("../parciales/headerAdmin") %>
-    <main>
-        <div class="contenedorDetalleProducto">
+    <main class="contenedorDetalleProducto">
+        <h1 class="tituloDetalleProducto">Producto <%= producto.codigo %></h1>
+        <div class="detalleProducto">
             <div class="datosProducto">
                 <p>Producto: <%= producto.nombre %></p>
                 <p>Modelo: <%= producto.modelo %></p>
@@ -22,7 +23,7 @@
             </div>
         </div>
         <div class="botonesDetalleProducto">
-            <button class="botonDetalleProducto"><a href="/admin/producto/<%= producto.codigo %>">Editar</a></button>
+            <button class="botonDetalleProducto"><a href="/admin/producto/<%= producto.codigo %>" class="botonLinkEditarProducto">Editar</a></button>
             <form action="/admin/producto/<%= producto.codigo %>?_method=DELETE" method="POST">
                 <button type="submit" class="botonDetalleProducto">Borrar</button>
             </form>

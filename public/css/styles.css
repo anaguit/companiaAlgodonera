@@ -427,9 +427,15 @@ footer a{
 }
 /* --- DETALLE PRODUCTO --- */
 .contenedorDetalleProducto{
+    font-size: 1rem;
+    padding-top: 30%;
+}
+.tituloDetalleProducto{
+    font-size: 0.85em;
+}
+.detalleProducto{
     display: flex;
     justify-content: space-between;
-    padding-top:10%;
 }
 .datosProducto{
     font-size: 0.75em;
@@ -451,6 +457,9 @@ footer a{
 .botonDetalleProducto{
     margin-right: 1%;
     font-size: 0.75em;
+}
+.botonLinkEditarProducto{
+    color:#000;
 }
 /* --- FORMULARIOS ADMIN --- */
 .formularioCrear{
@@ -630,11 +639,8 @@ footer a{
         font-size: 1.2rem;
     }
     /* --- DETALLE PRODUCTO --- */
-    .datosProducto{
-        font-size: 0.90em;
-    }
-    .botonDetalleProducto{
-        font-size: 0.90em;
+    .contenedorDetalleProducto{
+        font-size: 1.2rem;
     }
 
     /* --- FORMULARIO CREAR --- */
@@ -732,17 +738,9 @@ footer a{
     }
     /* --- DETALLE PRODUCTO --- */
     .contenedorDetalleProducto{
-        padding-top:5%;
+        font-size: 1.3rem;
+        padding-top: 25%;
     }
-    .datosProducto{
-        font-size: 1em;
-    }
-    .botonDetalleProducto{
-        font-size: 1em;
-    }
-    .formularioProducto{
-        font-size: 1.3rem;    
-    } 
 
     /* --- FORMULARIO CREAR --- */
     .formularioCrear{
@@ -782,6 +780,10 @@ footer a{
         padding-top: 20%;
     }
 
+    /* --- DETALLE PRODUCTO --- */
+    .contenedorDetalleProducto{
+        padding-top: 20%;
+    }
     /* --- FORMULARIO CREAR --- */
     .formularioCrear{
         padding-top: 18%;
