@@ -231,23 +231,6 @@ main{
     display: none;
 }
 
-/* --- DETALLE CLIENTE --- */
-.tituloDetalle{
-    text-align: center;
-}
-.cuerpoDetalle{
-    display: flex;
-    justify-content: space-between;
-}
-.contenedorImagenDetalle{
-    margin-right: 2%;
-    max-width: 40%;
-}
-.imagenDetalle{
-    max-width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
 /* FOOTER*/
 
 footer{
@@ -438,6 +421,9 @@ footer a{
 .contenedorDetalleProducto{
     font-size: 1rem;
     padding-top: 30%;
+}
+.rellenoContenedorDetalle{
+    padding-bottom: 35%;
 }
 .tituloDetalleProducto{
     font-size: 0.85em;
@@ -644,6 +630,9 @@ footer a{
     .contenedorDetalleProducto{
         font-size: 1.2rem;
         padding-top: 25%;
+    }
+    .rellenoContenedorDetalle{
+        padding-bottom: 20%;
     }
     .contenedorImagenProducto{
         padding-top: 3%;

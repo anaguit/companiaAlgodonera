@@ -3,17 +3,17 @@
 <%- include("../parciales/head") %>
 <body>
     <%- include("../parciales/header") %>
-    <main>
-        <h1 class="tituloDetalle"><%= producto.nombre %> <%= producto.modelo %></h1>
-        <div class="cuerpoDetalle">
-            <div class="infoDetalle">
+    <main class="contenedorDetalleProducto rellenoContenedorDetalle">
+        <h1 class="tituloDetalleProducto"><%= producto.nombre %> <%= producto.modelo %></h1>
+        <div class="detalleProducto">
+            <div class="datosProducto">
                 <p><%= producto.descripcion %></p>
                 <p>tamaño: <%= producto.productoTamanio.tamanio %></p>
                 <p>medidas: <%= producto.medidas %></p>
                 <p>marca: <%= producto.marca %></p> 
             </div>
-            <div class="contenedorImagenDetalle">
-                <img src="/imagenes/<%= producto.foto %>" class="imagenDetalle">
+            <div class="contenedorImagenProducto">
+                <img src="/imagenes/<%= producto.foto %>" class="imagenProducto">
             </div>
         </div>
     </main>
