@@ -5,8 +5,8 @@
     <%- include("../parciales/header") %>
 
     <main class="formularioContacto">
-        <div class="formulario">
-            <h3 class="tituloFormulario">Dejanos tu mensaje</h3>
+        <div class="cuerpoFormularioContacto">
+            <h1 class="tituloFormulario">Dejanos tu mensaje</h1>
             <form action="/contacto" method="POST">
                 <div class="camposContacto">
                     <p class="errorFormulario"><%= locals.errores && errores.nombre ? errores.nombre.msg : "" %></p>

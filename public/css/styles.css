@@ -144,10 +144,10 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 30%;
+    padding-top: 40%;
     padding-bottom: 10%;
  }
- .formulario{
+ .cuerpoFormularioContacto{
     background-color: #dc9f7c;
     box-shadow: 5px 5px 5px rgb(63, 62, 62);
     opacity: 0.9;
@@ -519,14 +519,11 @@ footer a{
     }
 
     /*CONTACTANOS*/
-    .formulario{
+    .formularioContacto{
+        padding-top: 32%;
+    }
+    .cuerpoFormularioContacto{
         font-size: 1.2rem;
-    }
-    .inputsFormulario{
-        width: 90%;
-    }
-    .botonContacto{
-        width:40%
     }
 
     /* HOME */
@@ -666,8 +663,11 @@ footer a{
     }
 
     /*CONTACTANOS*/
-    .formulario{
-        font-size: 2rem;
+    .formularioContacto{
+        padding-top: 28%;
+    }
+    .cuerpoFormularioContacto{
+        font-size: 1.4rem;
     }
 
     /* ---- ADMIN ---- */
@@ -745,6 +745,10 @@ footer a{
 @media only screen and (min-width:1280px){
     
     /* --- HEADER --- */
+    /* --- CONTACTANOS --- */
+    .formularioContacto{
+        padding-top: 18%;
+    }
     /* --- ADMIN --- */
 
     /* --- HEADER ADMIN --- */
