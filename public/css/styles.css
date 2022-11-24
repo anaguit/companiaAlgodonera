@@ -65,7 +65,12 @@ header{
     font-size: 1.3em;
     color:violet;
 }
-
+main{
+    width: 100vw;
+    background-color: #eee;
+    padding: 20px;
+    padding-top: 20%;
+}
 /* HOME */
 
 /*1er seccion*/
@@ -96,6 +101,7 @@ header{
  /*2da seccion */
 .mainHome{
     width: 100vw;
+    font-size: 1rem;
     background-color: #eee;
     padding: 5vw;
     padding-top: 1%;
@@ -106,7 +112,8 @@ header{
     font-size: 1rem;
 }
 .linkProductos{
-    font-size: 0.70em;
+    font-size: 0.80em;
+    color:#000;
 }
 .buscador{
     display: none;
@@ -121,19 +128,10 @@ header{
     width: 200px;
     height: 200px;
 }
-.seccionesInicio{
+/*.seccionesInicio{
     text-align: center;
     font-size: 1rem;
-}
-.tituloSeccion{
-    font-size: 0.9em;
-}
-main{
-    width: 100vw;
-    background-color: #eee;
-    padding: 20px;
-    padding-top: 20%;
-}
+}*/
 
 /*CONTACTANOS*/
 .formularioContacto{
@@ -550,22 +548,17 @@ footer a{
     .tituloBanner{
         font-size: 1.3em;
     }
-     /*2da seccion */
-     .buscador{
+    /*2da seccion */
+    .buscador{
         display: flex;
         flex-direction: column;
         font-size: 0.70em;
-     }
-    .mainHome{
-        padding: 5vw;
-        padding-top: 1%;
     }
-    .mainSuperior{
+
+    .mainHome{
         font-size: 1.2rem;
     }
-    /*.linkProductos{
-        font-size: 0.80em;
-    }
+    /*
     .buscador{
         font-size: 0.70em;
     }*/
@@ -676,6 +669,12 @@ footer a{
     }
     .descripcionFooter{
         font-size: 0.55em;
+    }
+
+    /* --- HOME --- */
+    /*2da seccion */
+    .mainHome{
+        font-size: 1.3rem;
     }
 
     /*CONTACTANOS*/

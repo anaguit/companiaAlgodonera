@@ -41,12 +41,12 @@
             </div>
         </section>
         <section class="seccionesMain">
-            <article class="seccionesInicio">
-                <h1 class="tituloSeccion">Destacados</h1>
+            <article>
+                <h1 class="tituloCategoria">Destacados</h1>
                 <div class="listadoProductos">
                     <% for(let destacado of destacados){ %>
                         <div class="articuloListado">
-                            <p><a href="/producto/<%= destacado.codigo %>"><%= destacado.nombre %> <%= destacado.modelo %></a></p>
+                            <a href="/producto/<%= destacado.codigo %>" class="tituloArticuloListado"><%= destacado.nombre %> <%= destacado.modelo %></a>
                             <div class="imagenArticulo">
                                 <img src="/imagenes/<%= destacado.foto %>" class="imagen">
                             </div>
@@ -54,12 +54,12 @@
                     <% } %>
                 </div>
             </article>
-            <article class="seccionesInicio">
-                <h1 class="tituloSeccion">Ofertas</h1>
+            <article>
+                <h1 class="tituloCategoria">Ofertas</h1>
                 <div class="listadoProductos">
                         <% for(let oferta of ofertas){ %>
                             <div class="articuloListado">
-                            <p><a href="/producto/<%= oferta.codigo %>"><%= oferta.nombre %> <%= oferta.modelo %></a></p>
+                            <a href="/producto/<%= oferta.codigo %>" class="tituloArticuloListado"><%= oferta.nombre %> <%= oferta.modelo %></a>
                                 <div class="imagenArticulo">
                                     <img src="/imagenes/<%= oferta.foto %>" class="imagen">
                                 </div>
