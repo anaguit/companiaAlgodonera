@@ -183,18 +183,24 @@ main{
 }
 
 /* LISTADO PRODUCTOS */
+.contenedorListado{
+    padding-top: 25%;
+    padding-bottom: 60%;
+    font-size: 1rem;
+}
 .categorias{
     padding-bottom:5%;
-    border-top: 4px solid #000 ;
+    border-top: 1px solid #000 ;
 }
 .tituloCategoria{
     text-align: center;
+    font-size: 0.80em;
 }
 .listadoProductos{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    /*border: solid 3px red;*/
+    padding-top: 3%;
 }
 .articuloListado{
     width: 20%;
@@ -209,8 +215,14 @@ main{
 .articuloListado:hover{
     box-shadow: 5px 5px 5px rgb(63, 62, 62);
 }
+.tituloArticuloListado{
+    font-size: 0.75em;
+    color: #000;
+    text-align: center;
+}
 .descripcionArticulo{
     display: none;
+    font-size: 0.75em;
 }
 .articuloListado:hover .descripcionArticulo{
     display: block;
@@ -226,9 +238,6 @@ main{
     max-width: 100%;
     height: 100%;
     object-fit: cover;
-}
-.descripcionArticulo{
-    display: none;
 }
 
 /* FOOTER*/
@@ -564,6 +573,13 @@ footer a{
         width:30vw;
     }*/
 
+    /* --- LISTADO DE PRODUCTOS --- */
+    .contenedorListado{
+        padding-top: 22%;
+        padding-bottom: 30%;
+        font-size: 1.2rem;
+    }
+
 
     /* ---- ADMIN ---- */
 
@@ -670,6 +686,12 @@ footer a{
         font-size: 1.4rem;
     }
 
+    /* --- LISTADO DE PRODUCTOS --- */
+    .contenedorListado{
+        padding-top: 18%;
+        font-size: 1.3rem;
+    }
+
     /* ---- ADMIN ---- */
 
     /* --- HEADER ADMIN --- */
@@ -748,6 +770,11 @@ footer a{
     /* --- CONTACTANOS --- */
     .formularioContacto{
         padding-top: 18%;
+    }
+
+    /* --- LISTADO DE PRODUCTOS --- */
+    .contenedorListado{
+        padding-top: 13%;
     }
     /* --- ADMIN --- */
 

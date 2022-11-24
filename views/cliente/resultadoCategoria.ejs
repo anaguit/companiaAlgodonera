@@ -3,12 +3,12 @@
 <%- include("../parciales/head") %>
 <body>
     <%- include("../parciales/header") %>
-    <main>
-        <h2>Productos de la categoria</h2>
+    <main class="contenedorListado">
+        <h1 class="tituloCategoria">Productos de la categoria</h1>
         <div class="listadoProductos">
             <% for(let producto of productos){ %>
                 <div class="articuloListado">
-                    <p><a href="/producto/<%= producto.codigo %>"><%= producto.nombre %> <%= producto.modelo %></a></p>
+                    <a href="/producto/<%= producto.codigo %>" class="tituloArticuloListado"><%= producto.nombre %> <%= producto.modelo %></a>
                     <div class="imagenArticulo">
                         <img src="/imagenes/<%= producto.foto %>" class="imagen">
                     </div>
