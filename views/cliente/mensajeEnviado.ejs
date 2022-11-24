@@ -3,12 +3,12 @@
 <%- include("../parciales/head") %>
 <body>
     <%- include("../parciales/header") %>   
-    <main>
-        <h2><%= persona.nombre %> gracias por contactarnos, pronto te estaremos contestando</h2>
-        <div class="verListado">
-            <h3><a href="productos">Mirá todos nuestros productos</a></h3>
+    <main class="contenedorVistaCorta">
+        <h1 class="tituloVistaCorta"><%= persona.nombre %> gracias por contactarnos, pronto te estaremos contestando</h1>
+        <div>
+            <a href="productos" class="textoVistaCorta">Mirá todos nuestros productos <b>acá</b></a>
         </div>
-        </main>
+    </main>
     <%- include("../parciales/footer") %>
 </body>
 </html>
