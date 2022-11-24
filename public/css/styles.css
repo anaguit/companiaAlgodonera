@@ -377,21 +377,20 @@ footer a{
 
 .contenedorVistaCorta{
     padding-top: 40%;
-    padding-bottom: 60%;
+    padding-bottom: 80%;
+    font-size: 1rem;
+}
+.tituloVistaCorta{
+    font-size: 0.85em;
 }
 .textoVistaCorta{
-    font-size: 0.80em;
+    font-size: 0.75em;
+    color:#000
 }
 .linksPosCreado{
     display: flex;
     flex-direction: column;
     padding-bottom:15%;
-}
-.tituloVistaCorta{
-    font-size: 1.2em;
-}
-.contenedorCreado{
-    padding-top: 40%;
 }
 .linkPosCreado{
     color:#000;
@@ -607,14 +606,9 @@ footer a{
     /* --- vistas cortas --- */
 
     .contenedorVistaCorta{
-        padding-top: 40%;
-        padding-bottom: 30%;
-    }
-    .textoVistaCorta{
-        font-size: 1em;
-    }
-    .tituloVistaCorta{
-        font-size: 1.5em;
+        padding-top: 25%;
+        padding-bottom: 40%;
+        font-size: 1.2rem;
     }
     .contenedorCreado{
         padding-top: 30%;
@@ -706,11 +700,9 @@ footer a{
     }
     /* --- VISTAS CORTAS --- */
     .contenedorVistaCorta{
-        padding-top: 30%;
-        padding-bottom: 50%;
-    }
-    .tituloVistaCorta{
-        font-size: 2em;
+        padding-top: 20%;
+        padding-bottom: 20%;
+        font-size: 1.3rem;
     }
     .contenedorCreado{
         padding-top: 25%;
@@ -788,8 +780,7 @@ footer a{
     
     /* --- VISTAS CORTAS --- */
     .contenedorVistaCorta{
-        padding-top: 25%;
-        padding-bottom: 40%;
+        padding-top: 15%;
     }
 
     /* --- MENSAJES CLIENTES --- */
