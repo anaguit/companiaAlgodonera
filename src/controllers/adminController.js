@@ -45,6 +45,7 @@ const controladorAdmin = {
                         nombre:req.body.nombre,
                         modelo:req.body.modelo,
                         marca:req.body.marca,
+                        descripcionCorta:req.body.descripcionCorta,
                         descripcion:req.body.descripcion,
                         precio:req.body.precio,
                         foto:req.file.filename,
@@ -100,6 +101,7 @@ const controladorAdmin = {
                 nombre:req.body.nombre,
                 modelo:req.body.modelo,
                 marca:req.body.marca,
+                descripcionCorta:req.body.descripcionCorta,
                 descripcion:req.body.descripcion,
                 precio:req.body.precio,
                 destacado:req.body.destacado,
@@ -125,6 +127,7 @@ const controladorAdmin = {
                     nombre:req.body.nombre,
                     modelo:req.body.modelo,
                     marca:req.body.marca,
+                    descripcionCorta:req.body.descripcionCorta,
                     descripcion:req.body.descripcion,
                     precio:req.body.precio,
                     foto:req.file.path,
@@ -164,10 +167,10 @@ const controladorAdmin = {
            fs.unlinkSync(path.resolve(__dirname,"../.././public/imagenes",productoEncontrado.foto));
            db.Producto.destroy({
             where:{codigo:req.params.codigo}
-        })
-        .then((producto)=>{
-            res.render("borradoExitoso")
-        })
+            })
+            .then((producto)=>{
+                res.render("borradoExitoso")
+            })
         })
         /*db.Producto.destroy({
             where:{codigo:req.params.codigo}
