@@ -50,6 +50,9 @@
                             <div class="imagenArticulo">
                                 <img src="/imagenes/<%= destacado.foto %>" class="imagen">
                             </div>
+                            <div class="descripcionArticulo">
+                                <p><%= destacado.descripcionCorta %></p>
+                            </div>
                         </div>
                     <% } %>
                 </div>
@@ -59,9 +62,12 @@
                 <div class="listadoProductos">
                         <% for(let oferta of ofertas){ %>
                             <div class="articuloListado">
-                            <a href="/producto/<%= oferta.codigo %>" class="tituloArticuloListado"><%= oferta.nombre %> <%= oferta.modelo %></a>
+                                <a href="/producto/<%= oferta.codigo %>" class="tituloArticuloListado"><%= oferta.nombre %> <%= oferta.modelo %></a>
                                 <div class="imagenArticulo">
                                     <img src="/imagenes/<%= oferta.foto %>" class="imagen">
+                                </div>
+                                <div class="descripcionArticulo">
+                                    <p><%= oferta.descripcionCorta %></p>
                                 </div>
                             </div>
                         <% } %>

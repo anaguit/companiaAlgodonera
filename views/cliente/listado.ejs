@@ -14,14 +14,14 @@
                             <img src="/imagenes/<%= sabana.foto %>" class="imagen">
                         </div> 
                         <div class="descripcionArticulo">
-                            <p><%= sabana.descripcion %></p>
+                            <p><%= sabana.descripcionCorta %></p>
                         </div>  
                     </div>
                 <% } %>
             </div>
         </section>
         <section class="categorias">
-            <h1 class="tituloCategoria">Fundas</h1>
+            <h1 class="tituloCategoria">Fundas de edredon</h1>
             <div class="listadoProductos">
                 <% for(let funda of fundas){ %>
                     <div class="articuloListado">
@@ -30,7 +30,23 @@
                             <img src="/imagenes/<%= funda.foto %>" class="imagen">
                         </div>
                         <div class="descripcionArticulo">
-                            <p><%= funda.descripcion %></p>
+                            <p><%= funda.descripcionCorta %></p>
+                        </div>
+                    </div>
+                <% } %>
+            </div>
+        </section>
+        <section class="categorias">
+            <h1 class="tituloCategoria">Edredones</h1>
+            <div class="listadoProductos">
+                <% for(let edredon of edredones){ %>
+                    <div class="articuloListado">
+                        <a href="/producto/<%= edredon.codigo %>" class="tituloArticuloListado"><%= edredon.nombre %> <%= edredon.modelo %></a>
+                        <div class="imagenArticulo">
+                            <img src="/imagenes/<%= edredon.foto %>" class="imagen">
+                        </div>
+                        <div class="descripcionArticulo">
+                            <p><%= edredon.descripcionCorta %></p>
                         </div>
                     </div>
                 <% } %>
@@ -46,7 +62,7 @@
                             <img src="/imagenes/<%= acolchado.foto %>" class="imagen">
                         </div>
                         <div class="descripcionArticulo">
-                            <p><%= acolchado.descripcion %></p>
+                            <p><%= acolchado.descripcionCorta %></p>
                         </div>
                     </div>
                 <% } %>
