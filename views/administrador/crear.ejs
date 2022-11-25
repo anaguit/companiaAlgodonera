@@ -24,6 +24,10 @@
                     <input type="text" name="marca" class="inputsCrear" placeholder="marca" value="<%= locals.data && locals.data.marca ? data.marca:'' %>">
                 </div>
                 <div class="inputsProducto">
+                    <p class="errorCrear"><%= locals.errores && errores.descripcionCorta ? errores.descripcionCorta.msg : "" %></p>
+                    <textarea name="descripcionCorta" class="inputsCrear" placeholder="descripcion corta"><%= locals.data && locals.data.descripcionCorta ? data.descripcionCorta : '' %></textarea>
+                </div>
+                <div class="inputsProducto">
                     <p class="errorCrear"><%= locals.errores && errores.descripcion ? errores.descripcion.msg : "" %></p>
                     <textarea name="descripcion" class="inputsCrear" placeholder="descripcion"><%= locals.data && locals.data.descripcion ? data.descripcion : '' %></textarea>
                 </div>
