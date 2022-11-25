@@ -6,6 +6,7 @@ const validacionesCrear = [
     body("modelo").notEmpty().withMessage("Campo obligatorio"),
     body("marca").notEmpty().withMessage("Campo obligatorio"),
     body("descripcion").notEmpty().withMessage("Campo obligatorio"),
+    body("descripcionCorta").notEmpty().withMessage("Campo obligatorio"),
     body("medidas").notEmpty().withMessage("Campo obligatorio"),
     body("categoria").notEmpty().withMessage("Campo obligatorio"),
     body("tamanio").notEmpty().withMessage("Campo obligatorio"),
