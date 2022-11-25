@@ -20,6 +20,10 @@ function productoData(sequelize,Datatypes){
             type:Datatypes.STRING(50),
             allowNull:false
         },
+        descripcionCorta:{
+            type:Datatypes.STRING(50),
+            allowNull:false
+        },
         descripcion:{
             type:Datatypes.STRING(500),
             allowNull:false
