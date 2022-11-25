@@ -562,12 +562,9 @@ footer a{
     }
     .buscador{
         display: flex;
-        flex-direction: column;
-        border:green 2px dashed;
-        
+        flex-direction: column;        
     }
     .filtro{
-        border: red 2px dashed;
         font-size: 1.1em;
     }
     .selectFiltro{
