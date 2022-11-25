@@ -183,7 +183,12 @@ const controladorAdmin = {
     verMensajes:(req,res)=>{
         db.Mensaje.findAll()
             .then((mensajes)=>{
-                res.render("mensajes",{mensajes})
+                if(mensajes.length !== 0){
+                    res.render("mensajes",{mensajes})
+                }
+                    else{
+                        res.render("noHaymensajes");
+                    };
             });
     },
     detalleMensaje:(req,res)=>{
