@@ -46,6 +46,9 @@ header{
     align-items:flex-end;
     font-size: 1rem;
 }
+.contacto{
+    padding-bottom: 2%;
+}
 .linkContacto{
     font-size: 0.85em;
 }
@@ -111,15 +114,15 @@ main{
     justify-content: space-between;
     font-size: 1rem;
 }
-.linkProductos{
+.linkListado{
     font-size: 0.80em;
+}
+.linkAlListado{
     color:#000;
 }
 .buscador{
     display: none;
-}
-.selectFiltro{
-    width:30vw;
+    font-size: 0.60em;
 }
 
 /*3er seccion */
@@ -146,7 +149,7 @@ main{
     padding-bottom: 10%;
  }
  .cuerpoFormularioContacto{
-    background-color: #dc9f7c;
+    background-color: #31302f;
     box-shadow: 5px 5px 5px rgb(63, 62, 62);
     opacity: 0.9;
     padding: 5%;
@@ -154,6 +157,7 @@ main{
     border-radius: 0.8rem;
  }
  .tituloFormulario{
+    color: #fff;
     text-align: center;
     font-size: 0.80em;
 }
@@ -548,23 +552,27 @@ footer a{
     .tituloBanner{
         font-size: 1.3em;
     }
-    /*2da seccion */
-    .buscador{
-        display: flex;
-        flex-direction: column;
-        font-size: 0.70em;
-    }
 
+    /*2da seccion */
     .mainHome{
         font-size: 1.2rem;
     }
-    /*
+    .mainSuperior{
+        font-size: 1.2rem;
+    }
     .buscador{
-        font-size: 0.70em;
-    }*/
-    /*.selectFiltro{
-        width:30vw;
-    }*/
+        display: flex;
+        flex-direction: column;
+        border:green 2px dashed;
+        
+    }
+    .filtro{
+        border: red 2px dashed;
+        font-size: 1.1em;
+    }
+    .selectFiltro{
+        width: 30vw;
+    }
 
     /* --- LISTADO DE PRODUCTOS --- */
     .contenedorListado{
@@ -676,6 +684,12 @@ footer a{
     .mainHome{
         font-size: 1.3rem;
     }
+    .mainSuperior{
+        font-size: 1.3rem;
+    }
+    .selectFiltro{
+        width: 20vw;
+    }
 
     /*CONTACTANOS*/
     .formularioContacto{
@@ -766,6 +780,18 @@ footer a{
 @media only screen and (min-width:1280px){
     
     /* --- HEADER --- */
+
+    /* --- HOME --- */
+    /*2da seccion */
+    /*.mainHome{
+        font-size: ;
+    }
+    .mainSuperior{
+        font-size: ;
+    }*/
+    .selectFiltro{
+        width: 12vw;
+    }
     /* --- CONTACTANOS --- */
     .formularioContacto{
         padding-top: 18%;
@@ -802,7 +828,6 @@ footer a{
 
     /* --- MENSAJES CLIENTES --- */
     .contenedorMensajes{
-        font-size: 1.3rem;
         padding-top: 20%;
     }
 
