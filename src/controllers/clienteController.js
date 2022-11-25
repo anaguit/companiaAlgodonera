@@ -26,9 +26,12 @@ const controladorCliente = {
         const categAcolchados = db.Producto.findAll({
             where:{idCategorias:3}
         });
-        Promise.all([categSabanas,categFundas,categAcolchados])
-            .then(([sabanas,fundas,acolchados])=>{
-                res.render("listado",{sabanas,acolchados,fundas})
+        const categEdredones = db.Producto.findAll({
+            where:{idCategorias:4}
+        });
+        Promise.all([categSabanas,categFundas,categAcolchados,categEdredones])
+            .then(([sabanas,fundas,acolchados,edredones])=>{
+                res.render("listado",{sabanas,acolchados,fundas,edredones})
             });
     },
     contactar:(req,res)=>{
