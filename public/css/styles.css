@@ -80,7 +80,7 @@ main{
 .banner{
     padding-top: 40%;
     width: 100vw;
-    background-image: url("/archivos/cama10.jpg");
+    background-image: url("/archivos/portadaPagina.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -541,12 +541,8 @@ footer a{
         font-size: 1.4rem;
     }
     .textoBanner{
-        top:-2vh;
+        top:-5vh;
         margin: 0vh 5vw 0vh 5vw;
-        font-size: 0.70em;
-    }
-    .tituloBanner{
-        font-size: 1.3em;
     }
 
     /*2da seccion */
@@ -673,6 +669,16 @@ footer a{
     }
 
     /* --- HOME --- */
+
+    /*1er seccion*/
+    .banner{
+        font-size: 1.4rem;
+    }
+    .textoBanner{
+        top:-8vh;
+        margin: 0vh 10vw 0vh 10vw;
+    }
+    
     /*2da seccion */
     .mainHome{
         font-size: 1.3rem;
@@ -775,6 +781,14 @@ footer a{
     /* --- HEADER --- */
 
     /* --- HOME --- */
+    /*1er seccion*/
+    .banner{
+        font-size: 1.5rem;
+    }
+    .textoBanner{
+        top:-13vh;
+        margin: 0vh 15vw 0vh 15vw;
+    }
     /*2da seccion */
     /*.mainHome{
         font-size: ;
