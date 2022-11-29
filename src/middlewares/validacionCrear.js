@@ -11,8 +11,14 @@ const validacionesCrear = [
     body("categoria").notEmpty().withMessage("Campo obligatorio"),
     body("tamanio").notEmpty().withMessage("Campo obligatorio"),
     body("destacado").notEmpty().withMessage("Campo obligatorio"),
-    body("oferta").notEmpty().withMessage("Campo obligatorio")
-    //body("foto") como se hace?
+    body("oferta").notEmpty().withMessage("Campo obligatorio"),
+    body("foto").custom((value,{req}) => {
+        const file = req.file;
+        if(!file){
+            throw new Error("Adjuntar imagen")
+        };
+        return true;
+    })
 ];
 
 module.exports = validacionesCrear;

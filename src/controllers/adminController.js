@@ -65,14 +65,14 @@ const controladorAdmin = {
                     })
                 }
                 else{
-                    fs.unlinkSync(req.file.path);
-                    
+                    if(req.file != undefined){
+                        fs.unlinkSync(req.file.path);
+                    }
                     const pedidoCategorias = db.Categorias.findAll();
                     const pedidoTamanios = db.Tamanios.findAll();
                     Promise.all([pedidoCategorias,pedidoTamanios])
                         .then(([categorias,tamanios])=>{
                             //res.send(errores.mapped())
-                            console.log(req.body)
                             res.render("crear",{errores:errores.mapped(),categorias,tamanios,data:req.body});
                         });
                 };

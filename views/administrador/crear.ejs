@@ -68,6 +68,7 @@
                     </div>
                 </div>
                 <div class="inputsProducto">
+                    <p class="errorCrear"><%= locals.errores && errores.foto ? errores.foto.msg : "" %></p>
                     <input type="file" name="foto" class="inputsCrear" accept=".jpeg, .jpg">
                 </div>
                 <div class="botonesCrear">
