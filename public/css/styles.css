@@ -551,6 +551,9 @@ footer a{
     .mainSuperior{
         font-size: 1.2rem;
     }
+    .buscadorcito{
+        display:none;
+    }
     .buscador{
         display: flex;
         flex-direction: column;        
