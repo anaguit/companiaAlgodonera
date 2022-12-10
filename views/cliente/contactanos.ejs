@@ -14,7 +14,11 @@
                 </div>
                 <div class="camposContacto">
                     <p class="errorFormulario"><%= locals.errores && errores.mail ? errores.mail.msg : "" %></p>
-                    <input type="text" name="mail" placeholder="mail o teléfono" value="<%= locals.data && data.mail ? data.mail : '' %>" class="inputsFormulario">
+                    <input type="text" name="mail" placeholder="mail" value="<%= locals.data && data.mail ? data.mail : '' %>" class="inputsFormulario">
+                </div>
+                <div class="camposContacto">
+                    <p class="errorFormulario"><!--<%= locals.errores && errores.telefono ? errores.telefono.msg : "" %>--></p>
+                    <input type="text" name="telefono" placeholder="teléfono" value="<%= locals.data && data.telefono ? data.telefono : '' %>" class="inputsFormulario">
                 </div>
                 <div class="camposContacto">
                     <p class="errorFormulario"><%= locals.errores && errores.asunto ? errores.asunto.msg : "" %></p>

@@ -44,6 +44,7 @@ const controladorCliente = {
             db.Mensaje.create({
                 nombre:req.body.nombre,
                 mail:req.body.mail,
+                telefono:req.body.telefono,
                 asunto:req.body.asunto,
                 texto:req.body.mensaje
             }).then((persona)=>{

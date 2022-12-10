@@ -16,6 +16,10 @@ function mensajeData(sequelize,Datatypes){
             type:Datatypes.STRING(50),
             allowNull:false
         },
+        telefono:{
+            type:Datatypes.STRING(50),
+            allowNull:true
+        },
         asunto:{
             type:Datatypes.STRING(50),
             allowNull:false
