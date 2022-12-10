@@ -7,7 +7,8 @@
         <h1 class="tituloVistaMensaje">Detalle mensaje</h1>
         <div class="mensajes">
             <p class="textoMensaje">Remitente: <%= mensaje.nombre %></p>
-            <p class="textoMensaje">Contacto: <%= mensaje.mail %></p>
+            <p class="textoMensaje">Mail: <%= mensaje.mail %></p>
+            <p class="textoMensaje">Teléfono: <%= mensaje.telefono %></p>
             <p class="textoMensaje">Asunto: <%= mensaje.asunto %></p>
             <p class="textoMensaje">Consulta: <%= mensaje.texto %></p>
             <form action="/admin/mensaje/<%= mensaje.id %>?_method=DELETE" method="POST">
