@@ -56,17 +56,9 @@ header{
     font-size: 0.85em;
     color:#fff;
 }
-.whatsapp{
-    font-size: 1.3em;
-    color:green;
-}
-.facebook{
-    font-size: 1.3em;
-    color:blue;
-}
-.instagram{
-    font-size: 1.3em;
-    color:violet;
+.iconos{
+    font-size: 1em;
+    color: #fff;
 }
 main{
     width: 100vw;
