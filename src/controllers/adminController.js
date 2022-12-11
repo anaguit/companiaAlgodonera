@@ -207,7 +207,7 @@ const controladorAdmin = {
             res.render("mensajeBorrado",{mensaje});
         });
     },
-    registrar:(req,res)=>{
+    /*registrar:(req,res)=>{
         res.render("registrar");
     },
     guardarRegistro:(req,res)=>{
@@ -217,7 +217,7 @@ const controladorAdmin = {
         }).then((administrador)=>{
             res.send(administrador)
         });
-    },
+    },*/
     login:(req,res)=>{
         res.render("loguear")
     },
