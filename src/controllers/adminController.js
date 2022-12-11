@@ -130,7 +130,7 @@ const controladorAdmin = {
                     descripcionCorta:req.body.descripcionCorta,
                     descripcion:req.body.descripcion,
                     precio:req.body.precio,
-                    foto:req.file.path,
+                    foto:req.file.filename,
                     destacado:req.body.destacado,
                     oferta:req.body.oferta,
                     codigo:req.body.codigo,
