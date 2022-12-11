@@ -164,7 +164,8 @@ main{
 }
 .inputsFormulario{
     font-size: 0.65em;
-    width: 75%;
+    width: 90%;
+    text-align: center;
 }
 .botonesContacto{
     padding-top: 10%;
@@ -172,7 +173,7 @@ main{
 }
 .botonContacto{
     font-size: 0.60em;
-    width:37%
+    width:45%
 }
 
 /* LISTADO PRODUCTOS */

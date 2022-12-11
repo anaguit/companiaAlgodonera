@@ -10,23 +10,23 @@
             <form action="/contacto" method="POST">
                 <div class="camposContacto">
                     <p class="errorFormulario"><%= locals.errores && errores.nombre ? errores.nombre.msg : "" %></p>
-                    <input type="text" name="nombre" placeholder="nombre" value="<%= locals.data && data.nombre ? data.nombre : '' %>" class="inputsFormulario">
+                    <input type="text" name="nombre" placeholder="Nombre" value="<%= locals.data && data.nombre ? data.nombre : '' %>" class="inputsFormulario">
                 </div>
                 <div class="camposContacto">
                     <p class="errorFormulario"><%= locals.errores && errores.mail ? errores.mail.msg : "" %></p>
-                    <input type="text" name="mail" placeholder="mail" value="<%= locals.data && data.mail ? data.mail : '' %>" class="inputsFormulario">
+                    <input type="text" name="mail" placeholder="Mail" value="<%= locals.data && data.mail ? data.mail : '' %>" class="inputsFormulario">
                 </div>
                 <div class="camposContacto">
                     <p class="errorFormulario"><!--<%= locals.errores && errores.telefono ? errores.telefono.msg : "" %>--></p>
-                    <input type="text" name="telefono" placeholder="teléfono" value="<%= locals.data && data.telefono ? data.telefono : '' %>" class="inputsFormulario">
+                    <input type="text" name="telefono" placeholder="Teléfono" value="<%= locals.data && data.telefono ? data.telefono : '' %>" class="inputsFormulario">
                 </div>
                 <div class="camposContacto">
                     <p class="errorFormulario"><%= locals.errores && errores.asunto ? errores.asunto.msg : "" %></p>
-                    <input type="text" name="asunto" placeholder="asunto" value="<%= locals.data && data.asunto ? data.asunto : '' %>" class="inputsFormulario">
+                    <input type="text" name="asunto" placeholder="Asunto" value="<%= locals.data && data.asunto ? data.asunto : '' %>" class="inputsFormulario">
                 </div>
                 <div class="camposContacto">
                     <p class="errorFormulario"><%= locals.errores && errores.mensaje ? errores.mensaje.msg : "" %></p>
-                    <textarea name="mensaje" placeholder="dejanos tu mensaje" class="inputsFormulario"><%= locals.data && data.mensaje ? data.mensaje : '' %></textarea>
+                    <textarea name="mensaje" placeholder="Dejanos tu mensaje" class="inputsFormulario"><%= locals.data && data.mensaje ? data.mensaje : '' %></textarea>
                 </div>
                 <div class="botonesContacto">
                     <button type="submit" class="botonContacto">Enviar</button>
