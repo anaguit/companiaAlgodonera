@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../parciales/head") %>
+<body>
+    <%- include("../parciales/header") %>
+
+    <main class="formularioContacto">
+            <form action="/admin/prueba" method="POST" enctype="multipart/form-data">
+                <div class="camposContacto">
+                    <input type="file" name="prueba">
+                </div>
+                <div class="botonesContacto">
+                    <button type="submit" class="botonContacto">Enviar</button>
+                    <button type="reset" class="botonContacto">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <%- include("../parciales/footer") %>   
+</body>
+</html>

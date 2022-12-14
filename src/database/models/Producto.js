@@ -51,6 +51,9 @@ function productoData(sequelize,Datatypes){
         medidas:{
             type:Datatypes.STRING(50),
             allowNull:true
+        },
+        path:{
+            type:Datatypes.STRING(150)
         }
     };
 
