@@ -41,8 +41,8 @@ router.post("/prueba",subirArchivo.single("prueba"),(req,res)=>{
 router.get("/",controladorAdmin.login);
 router.post("/",controladorAdmin.logueado);
 router.get("/panel",autorizado,controladorAdmin.panel);
-router.get("/crear",autorizado,controladorAdmin.crear);
 router.get("/productos",autorizado,controladorAdmin.listarProductos)
+router.get("/crear",autorizado,controladorAdmin.crear);
 router.post("/crear",autorizado,subirArchivo.single("foto"),validacionesCrear,controladorAdmin.guardarCreado);
 router.get("/resultado",autorizado,controladorAdmin.buscar);
 router.get("/producto/:codigo",autorizado,controladorAdmin.editar);

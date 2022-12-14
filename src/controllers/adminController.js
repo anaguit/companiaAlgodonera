@@ -53,6 +53,7 @@ const controladorAdmin = {
                         oferta:req.body.oferta,
                         codigo:req.body.codigo,
                         medidas:req.body.medidas,
+                        path:req.file.path,
                         idTamanios:req.body.tamanio,
                         idCategorias:req.body.categoria
                     }).then((resultado)=>{

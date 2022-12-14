@@ -53,7 +53,8 @@ function productoData(sequelize,Datatypes){
             allowNull:true
         },
         path:{
-            type:Datatypes.STRING(150)
+            type:Datatypes.STRING(150),
+            allowNull:false
         }
     };
 
