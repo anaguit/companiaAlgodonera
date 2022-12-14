@@ -51,7 +51,7 @@
                         <div class="articuloListado">
                             <a href="/producto/<%= destacado.codigo %>" class="tituloArticuloListado"><%= destacado.nombre %> <%= destacado.modelo %></a>
                             <div class="imagenArticulo">
-                                <img src="/imagenes/<%= destacado.foto %>" class="imagen">
+                                <img src="<%= destacado.path %><%= destacado.foto %>" class="imagen">
                             </div>
                             <div class="descripcionArticulo">
                                 <p><%= destacado.descripcionCorta %></p>
@@ -67,7 +67,7 @@
                             <div class="articuloListado">
                                 <a href="/producto/<%= oferta.codigo %>" class="tituloArticuloListado"><%= oferta.nombre %> <%= oferta.modelo %></a>
                                 <div class="imagenArticulo">
-                                    <img src="/imagenes/<%= oferta.foto %>" class="imagen">
+                                    <img src="<%= oferta.path %><%= oferta.foto %>" class="imagen">
                                 </div>
                                 <div class="descripcionArticulo">
                                     <p><%= oferta.descripcionCorta %></p>
