@@ -53,8 +53,16 @@ function productoData(sequelize,Datatypes){
             allowNull:true
         },
         path:{
-            type:Datatypes.STRING(150),
-            allowNull:false
+            type:Datatypes.STRING(100),
+            allowNull:true
+        },
+        public_id:{
+            type:Datatypes.STRING(100),
+            allowNull:true
+        },
+        url:{
+            type:Datatypes.STRING(100),
+            allowNull:true
         }
     };
 
