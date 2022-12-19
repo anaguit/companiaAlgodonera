@@ -15,6 +15,7 @@ app.use(session({
     resave:false,
     saveUninitialized:false
 }));
+
 app.use("/",rutasCliente);
 app.use("/admin",rutasAdmin);
 

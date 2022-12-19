@@ -4,6 +4,7 @@ const {validationResult} = require("express-validator");
 const fs = require("fs");
 const path = require("path");
 const bcrypt = require("bcryptjs");
+const cloudinary = require("cloudinary").v2;
 
 const controladorAdmin = {
     panel:(req,res)=>{
@@ -35,10 +36,8 @@ const controladorAdmin = {
         });
     },
     guardarCreado:(req,res)=>{
-        db.Producto.findOne({
-            where:{codigo:req.body.codigo}
-        }).then((productoExistente)=>{
-            if(productoExistente == undefined){
+        db.Producto.findAll().then((resultado)=>{
+            if(resultado.length == 0){
                 const errores = validationResult(req);
                 if(errores.isEmpty()){
                     db.Producto.create({
@@ -54,6 +53,8 @@ const controladorAdmin = {
                         codigo:req.body.codigo,
                         medidas:req.body.medidas,
                         path:req.file.path,
+                        //public_id:req.file.,
+                        //url:req.file.,
                         idTamanios:req.body.tamanio,
                         idCategorias:req.body.categoria
                     }).then((resultado)=>{
@@ -79,7 +80,55 @@ const controladorAdmin = {
                 };
             }
             else{
-                res.render("productoExistente");
+                db.Producto.findOne({
+                    where:{codigo:req.body.codigo}
+                }).then((productoExistente)=>{
+                    if(productoExistente == undefined){
+                        const errores = validationResult(req);
+                        if(errores.isEmpty()){
+                            db.Producto.create({
+                                nombre:req.body.nombre,
+                                modelo:req.body.modelo,
+                                marca:req.body.marca,
+                                descripcionCorta:req.body.descripcionCorta,
+                                descripcion:req.body.descripcion,
+                                precio:req.body.precio,
+                                foto:req.file.filename,
+                                destacado:req.body.destacado,
+                                oferta:req.body.oferta,
+                                codigo:req.body.codigo,
+                                medidas:req.body.medidas,
+                                path:req.file.path,
+                                //public_id:req.file.,
+                                //url:req.file.,
+                                idTamanios:req.body.tamanio,
+                                idCategorias:req.body.categoria
+                            }).then((resultado)=>{
+                                db.Producto.findOne({
+                                    where:{codigo:req.body.codigo}
+                                })
+                                .then((productoEncontrado)=>{
+                                    res.render("creadoExitoso",{productoEncontrado});
+                                })
+                            })
+                        }
+                        else{
+                            if(req.file != undefined){
+                                fs.unlinkSync(req.file.path);
+                            }
+                            const pedidoCategorias = db.Categorias.findAll();
+                            const pedidoTamanios = db.Tamanios.findAll();
+                            Promise.all([pedidoCategorias,pedidoTamanios])
+                                .then(([categorias,tamanios])=>{
+                                    //res.send(errores.mapped())
+                                    res.render("crear",{errores:errores.mapped(),categorias,tamanios,data:req.body});
+                                });
+                        };
+                    }
+                    else{
+                        res.render("productoExistente");
+                    };
+                });
             };
         });
     },
@@ -123,7 +172,7 @@ const controladorAdmin = {
                 where:{codigo:req.params.codigo}
             })
             .then((productoEncontrado)=>{
-                fs.unlinkSync(path.resolve(__dirname,"../../public/imagenes",productoEncontrado.foto));
+                cloudinary.uploader.destroy(productoEncontrado.foto)
                 db.Producto.update({
                     nombre:req.body.nombre,
                     modelo:req.body.modelo,
@@ -136,6 +185,9 @@ const controladorAdmin = {
                     oferta:req.body.oferta,
                     codigo:req.body.codigo,
                     medidas:req.body.medidas,
+                    path:req.file.path,
+                    //public_id:req.file.,
+                    //url:req.file.,
                     idTamanios:req.body.tamanio,
                     idCategorias:req.body.categoria
                 },{
@@ -165,7 +217,7 @@ const controladorAdmin = {
             where:{codigo:req.params.codigo}
         })
         .then((productoEncontrado)=>{
-           fs.unlinkSync(path.resolve(__dirname,"../.././public/imagenes",productoEncontrado.foto));
+            cloudinary.uploader.destroy(productoEncontrado.foto)
            db.Producto.destroy({
             where:{codigo:req.params.codigo}
             })
@@ -173,13 +225,6 @@ const controladorAdmin = {
                 res.render("borradoExitoso")
             })
         })
-        /*db.Producto.destroy({
-            where:{codigo:req.params.codigo}
-        })
-        .then((producto)=>{
-            console.log(producto)
-            res.render("borradoExitoso")
-        })*/
     },
     verMensajes:(req,res)=>{
         db.Mensaje.findAll()
@@ -237,4 +282,6 @@ const controladorAdmin = {
         });
     }
 };
+
+
 module.exports = controladorAdmin;
