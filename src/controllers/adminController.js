@@ -68,13 +68,12 @@ const controladorAdmin = {
                 }
                 else{
                     if(req.file != undefined){
-                        fs.unlinkSync(req.file.path);
+                        cloudinary.uploader.destroy(req.file.filename)
                     }
                     const pedidoCategorias = db.Categorias.findAll();
                     const pedidoTamanios = db.Tamanios.findAll();
                     Promise.all([pedidoCategorias,pedidoTamanios])
                         .then(([categorias,tamanios])=>{
-                            //res.send(errores.mapped())
                             res.render("crear",{errores:errores.mapped(),categorias,tamanios,data:req.body});
                         });
                 };
@@ -114,18 +113,20 @@ const controladorAdmin = {
                         }
                         else{
                             if(req.file != undefined){
-                                fs.unlinkSync(req.file.path);
+                                cloudinary.uploader.destroy(req.file.filename)
                             }
                             const pedidoCategorias = db.Categorias.findAll();
                             const pedidoTamanios = db.Tamanios.findAll();
                             Promise.all([pedidoCategorias,pedidoTamanios])
                                 .then(([categorias,tamanios])=>{
-                                    //res.send(errores.mapped())
                                     res.render("crear",{errores:errores.mapped(),categorias,tamanios,data:req.body});
                                 });
                         };
                     }
                     else{
+                        if(req.file != undefined){
+                            cloudinary.uploader.destroy(req.file.filename)
+                        }
                         res.render("productoExistente");
                     };
                 });
@@ -255,8 +256,8 @@ const controladorAdmin = {
     },
     /*registrar:(req,res)=>{
         res.render("registrar");
-    },
-    guardarRegistro:(req,res)=>{
+    },*/
+    /*guardarRegistro:(req,res)=>{
         db.Administrador.create({
             nombre:req.body.email,
             contrasenia:bcrypt.hashSync(req.body.contrasenia,10)
