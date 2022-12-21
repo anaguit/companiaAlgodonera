@@ -1,3 +1,4 @@
 node_modules/
 public/imagenes
 views/administrador/registrar.ejs
+.env
