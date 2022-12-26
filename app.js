@@ -6,6 +6,8 @@ const session = require("express-session");
 const rutasCliente = require("./src/routes/clienteRouter");
 const rutasAdmin = require("./src/routes/rutasAdmin");
 
+require("dotenv").config();
+
 app.use(express.static(path.join(__dirname,"./public")));
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
@@ -24,6 +26,6 @@ app.set("views",[path.join(__dirname,"/views"),
                 path.join(__dirname,"/views/cliente"),
                 path.join(__dirname,"/views/administrador")]);
 
-app.listen(3000,()=>{
+app.listen(process.env.PORT || 3000,()=>{
     console.log("servidor corriendo");
 });
