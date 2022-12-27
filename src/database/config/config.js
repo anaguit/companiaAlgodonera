@@ -10,9 +10,10 @@ module.exports = {
   },
   "test": {
     "username": "root",
-    "password": null,
+    "password": process.env.BD_LOCAL_PASSWORD,
     "database": "companiaalgodonera",
     "host": "127.0.0.1",
+    "port": 3306,
     "dialect": "mysql"
   },
   "production": {
