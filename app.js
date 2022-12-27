@@ -27,5 +27,5 @@ app.set("views",[path.join(__dirname,"/views"),
                 path.join(__dirname,"/views/administrador")]);
 
 app.listen(process.env.PORT || 3000,()=>{
-    console.log("servidor corriendo");
+    console.log("servidor corriendo " + process.env.PORT);
 });
