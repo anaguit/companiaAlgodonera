@@ -12,7 +12,7 @@ module.exports = {
     "username": "root",
     "password": process.env.BD_LOCAL_PASSWORD,
     "database": "companiaalgodonera",
-    "host": "127.0.0.1",
+    "host": process.env.DB_HOST,
     "port": 3306,
     "dialect": "mysql"
   },
