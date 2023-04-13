@@ -20,8 +20,6 @@ if (config.use_env_variable) {
   console.log(env)
   console.log(config)*/
   sequelize = new Sequelize(config.database, config.username, config.password, config);
-  //console.log("que sale?")
-  //console.log(sequelize)
 }
 
 fs
