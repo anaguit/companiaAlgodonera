@@ -1,5 +1,5 @@
 'use strict';
-require("dotenv").config({path:"../../../.env"});
+require("dotenv").config();
 const fs = require('fs');
 const path = require('path');
 const Sequelize = require('sequelize');
@@ -10,15 +10,14 @@ const db = {};
 
 let sequelize;
 if (config.use_env_variable) {
-  //console.log(config)
+  console.log("entro por el if:");
+  console.log(config);
+  console.log(config.use_env_variable);
   sequelize = new Sequelize(process.env[config.use_env_variable], config);
 } else {
-  /*console.log(config.use_env_variable)
-  console.log(config.database)
-  console.log(config.username)
-  console.log(config.password)
+  console.log("entro por el else:")
   console.log(env)
-  console.log(config)*/
+  console.log(config)
   sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
 
